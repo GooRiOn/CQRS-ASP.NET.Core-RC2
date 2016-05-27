@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0/",
-    "signature": "03b41c6e9dbce4c88ed5dd57f6f744a5ff4f85e8"
+    "signature": "16b99787c1a4745ca084f4869553845e9c9b5eaf"
   },
   "compilationOptions": {
     "defines": [
@@ -10,13 +10,14 @@
       "NETCOREAPP1_0"
     ],
     "optimize": false,
-    "emitEntryPoint": true
+    "emitEntryPoint": true,
+    "debugType": "portable"
   },
   "targets": {
     ".NETCoreApp,Version=v1.0": {
       "CQRS/1.0.0": {
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
           "CQRS.Contracts": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.Messaging": "1.0.0",
@@ -36,7 +37,7 @@
           "CQRS.dll": {}
         }
       },
-      "Autofac/4.0.0-rc1-177": {
+      "Autofac/4.0.0-rc2-240": {
         "dependencies": {
           "System.Collections.Concurrent": "4.0.12-rc2-24027",
           "System.ComponentModel": "4.0.1-rc2-24027",
@@ -50,22 +51,24 @@
           "System.Reflection.Primitives": "4.0.1-rc2-24027",
           "System.Resources.ResourceManager": "4.0.1-rc2-24027",
           "System.Runtime": "4.1.0-rc2-24027",
+          "System.Runtime.Extensions": "4.1.0-rc2-24027",
           "System.Threading": "4.0.11-rc2-24027"
         },
         "compile": {
-          "lib/dotnet5.2/Autofac.dll": {}
+          "lib/netstandard1.1/Autofac.dll": {}
         }
       },
-      "Autofac.Extensions.DependencyInjection/4.0.0-rc1-177": {
+      "Autofac.Extensions.DependencyInjection/4.0.0-rc2-240": {
         "dependencies": {
-          "Autofac": "4.0.0-rc1-177",
+          "Autofac": "4.0.0-rc2-240",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
           "System.Collections": "4.0.11-rc2-24027",
+          "System.Diagnostics.Contracts": "4.0.1-rc2-24027",
           "System.Runtime": "4.1.0-rc2-24027",
           "System.Threading.Tasks": "4.0.11-rc2-24027"
         },
         "compile": {
-          "lib/dotnet5.4/Autofac.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.9.0-rc2-20901": {},
@@ -2473,7 +2476,7 @@
       "CQRS.DataAccess/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.5.0-rc2-24027",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "compile": {
           "CQRS.DataAccess.dll": {}
@@ -2485,7 +2488,7 @@
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.DataAccess": "1.0.0",
           "CQRS.Contracts": "1.0.0",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "compile": {
           "CQRS.Domain.dll": {}
@@ -2494,7 +2497,7 @@
       "CQRS.Infrastructure/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.5.0-rc2-24027",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "compile": {
           "CQRS.Infrastructure.dll": {}
@@ -2505,7 +2508,7 @@
           "NETStandard.Library": "1.5.0-rc2-24027",
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.Domain": "1.0.0",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "compile": {
           "CQRS.Messaging.dll": {}
@@ -2515,7 +2518,7 @@
     ".NETCoreApp,Version=v1.0/": {
       "CQRS/1.0.0": {
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
           "CQRS.Contracts": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.Messaging": "1.0.0",
@@ -2535,7 +2538,7 @@
           "CQRS.dll": {}
         }
       },
-      "Autofac/4.0.0-rc1-177": {
+      "Autofac/4.0.0-rc2-240": {
         "dependencies": {
           "System.Collections.Concurrent": "4.0.12-rc2-24027",
           "System.ComponentModel": "4.0.1-rc2-24027",
@@ -2549,22 +2552,24 @@
           "System.Reflection.Primitives": "4.0.1-rc2-24027",
           "System.Resources.ResourceManager": "4.0.1-rc2-24027",
           "System.Runtime": "4.1.0-rc2-24027",
+          "System.Runtime.Extensions": "4.1.0-rc2-24027",
           "System.Threading": "4.0.11-rc2-24027"
         },
         "runtime": {
-          "lib/dotnet5.2/Autofac.dll": {}
+          "lib/netstandard1.1/Autofac.dll": {}
         }
       },
-      "Autofac.Extensions.DependencyInjection/4.0.0-rc1-177": {
+      "Autofac.Extensions.DependencyInjection/4.0.0-rc2-240": {
         "dependencies": {
-          "Autofac": "4.0.0-rc1-177",
+          "Autofac": "4.0.0-rc2-240",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
           "System.Collections": "4.0.11-rc2-24027",
+          "System.Diagnostics.Contracts": "4.0.1-rc2-24027",
           "System.Runtime": "4.1.0-rc2-24027",
           "System.Threading.Tasks": "4.0.11-rc2-24027"
         },
         "runtime": {
-          "lib/dotnet5.4/Autofac.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.9.0-rc2-20901": {},
@@ -4842,7 +4847,7 @@
       "CQRS.DataAccess/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.5.0-rc2-24027",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "runtime": {
           "CQRS.DataAccess.dll": {}
@@ -4854,7 +4859,7 @@
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.DataAccess": "1.0.0",
           "CQRS.Contracts": "1.0.0",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "runtime": {
           "CQRS.Domain.dll": {}
@@ -4863,7 +4868,7 @@
       "CQRS.Infrastructure/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.5.0-rc2-24027",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "runtime": {
           "CQRS.Infrastructure.dll": {}
@@ -4874,7 +4879,7 @@
           "NETStandard.Library": "1.5.0-rc2-24027",
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.Domain": "1.0.0",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
         },
         "runtime": {
           "CQRS.Messaging.dll": {}
@@ -4888,15 +4893,15 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Autofac/4.0.0-rc1-177": {
+    "Autofac/4.0.0-rc2-240": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cTSfTca0qWl3Zd68iMl2bH8e4RyGL/Q7EUT0PmAzCSoitSlrHu4zmByhP/f+KGGSuRqWHFYoMEEOanvTviEr4g=="
+      "sha512": "sha512-SBXozd5kNsCAs6LgsEhvX54ntF5OqhCo0ZL0afcutqh8XRq5q8gmFZN89I3NkCtCypsRAqKQPgWlg29GrpVs9Q=="
     },
-    "Autofac.Extensions.DependencyInjection/4.0.0-rc1-177": {
+    "Autofac.Extensions.DependencyInjection/4.0.0-rc2-240": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FEmKbGpwAza4MW3Az8v+8V42wuRYDFX+8LpTl8XzLi9VcdLNlWvErdk2q74u4+a4UHbvpAQ62tfh5ctMnDa9yA=="
+      "sha512": "sha512-rZCoDl3RlRgUrI2cbKzp1c6R/0OA4HzJ0MbgWKbxgmTc6X0RcSCdUOJOWDx1ZuGbNFLtSLYsLdYzUueo11s5sw=="
     },
     "Libuv/1.9.0-rc2-20901": {
       "type": "package",

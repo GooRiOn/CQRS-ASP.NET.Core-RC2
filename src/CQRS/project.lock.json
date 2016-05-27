@@ -3,44 +3,46 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.0": {
-      "Autofac/4.0.0-rc1-177": {
+      "Autofac/4.0.0-rc2-240": {
         "type": "package",
         "dependencies": {
-          "System.Collections.Concurrent": "4.0.11-beta-23516",
-          "System.ComponentModel": "4.0.1-beta-23516",
-          "System.Diagnostics.Debug": "4.0.11-beta-23516",
-          "System.Diagnostics.Tools": "4.0.1-beta-23516",
-          "System.Globalization": "4.0.11-beta-23516",
-          "System.Linq": "4.0.1-beta-23516",
-          "System.Linq.Expressions": "4.0.11-beta-23516",
-          "System.Reflection": "4.1.0-beta-23516",
-          "System.Reflection.Extensions": "4.0.1-beta-23516",
-          "System.Reflection.Primitives": "4.0.1-beta-23516",
-          "System.Resources.ResourceManager": "4.0.1-beta-23516",
-          "System.Runtime": "4.0.21-beta-23516",
-          "System.Threading": "4.0.11-beta-23516"
+          "System.Collections.Concurrent": "4.0.12-rc2-24027",
+          "System.ComponentModel": "4.0.1-rc2-24027",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
+          "System.Globalization": "4.0.11-rc2-24027",
+          "System.Linq": "4.1.0-rc2-24027",
+          "System.Linq.Expressions": "4.0.11-rc2-24027",
+          "System.Reflection": "4.1.0-rc2-24027",
+          "System.Reflection.Extensions": "4.0.1-rc2-24027",
+          "System.Reflection.Primitives": "4.0.1-rc2-24027",
+          "System.Resources.ResourceManager": "4.0.1-rc2-24027",
+          "System.Runtime": "4.1.0-rc2-24027",
+          "System.Runtime.Extensions": "4.1.0-rc2-24027",
+          "System.Threading": "4.0.11-rc2-24027"
         },
         "compile": {
-          "lib/dotnet5.2/Autofac.dll": {}
+          "lib/netstandard1.1/Autofac.dll": {}
         },
         "runtime": {
-          "lib/dotnet5.2/Autofac.dll": {}
+          "lib/netstandard1.1/Autofac.dll": {}
         }
       },
-      "Autofac.Extensions.DependencyInjection/4.0.0-rc1-177": {
+      "Autofac.Extensions.DependencyInjection/4.0.0-rc2-240": {
         "type": "package",
         "dependencies": {
-          "Autofac": "4.0.0-rc1-177",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
-          "System.Collections": "4.0.11-beta-23516",
-          "System.Runtime": "4.0.21-beta-23516",
-          "System.Threading.Tasks": "4.0.11-beta-23516"
+          "Autofac": "4.0.0-rc2-240",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
+          "System.Collections": "4.0.11-rc2-24027",
+          "System.Diagnostics.Contracts": "4.0.1-rc2-24027",
+          "System.Runtime": "4.1.0-rc2-24027",
+          "System.Threading.Tasks": "4.0.11-rc2-24027"
         },
         "compile": {
-          "lib/dotnet5.4/Autofac.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/dotnet5.4/Autofac.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.9.0-rc2-20901": {
@@ -3395,34 +3397,24 @@
     }
   },
   "libraries": {
-    "Autofac/4.0.0-rc1-177": {
-      "sha512": "cTSfTca0qWl3Zd68iMl2bH8e4RyGL/Q7EUT0PmAzCSoitSlrHu4zmByhP/f+KGGSuRqWHFYoMEEOanvTviEr4g==",
+    "Autofac/4.0.0-rc2-240": {
+      "sha512": "SBXozd5kNsCAs6LgsEhvX54ntF5OqhCo0ZL0afcutqh8XRq5q8gmFZN89I3NkCtCypsRAqKQPgWlg29GrpVs9Q==",
       "type": "package",
       "files": [
-        "Autofac.4.0.0-rc1-177.nupkg.sha512",
+        "Autofac.4.0.0-rc2-240.nupkg.sha512",
         "Autofac.nuspec",
-        "lib/dnxcore50/Autofac.dll",
-        "lib/dnxcore50/Autofac.xml",
-        "lib/dotnet5.2/Autofac.dll",
-        "lib/dotnet5.2/Autofac.xml",
-        "lib/net45/Autofac.dll",
-        "lib/net45/Autofac.xml",
-        "lib/win/Autofac.dll",
-        "lib/win/Autofac.xml"
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.xml"
       ]
     },
-    "Autofac.Extensions.DependencyInjection/4.0.0-rc1-177": {
-      "sha512": "FEmKbGpwAza4MW3Az8v+8V42wuRYDFX+8LpTl8XzLi9VcdLNlWvErdk2q74u4+a4UHbvpAQ62tfh5ctMnDa9yA==",
+    "Autofac.Extensions.DependencyInjection/4.0.0-rc2-240": {
+      "sha512": "rZCoDl3RlRgUrI2cbKzp1c6R/0OA4HzJ0MbgWKbxgmTc6X0RcSCdUOJOWDx1ZuGbNFLtSLYsLdYzUueo11s5sw==",
       "type": "package",
       "files": [
-        "Autofac.Extensions.DependencyInjection.4.0.0-rc1-177.nupkg.sha512",
+        "Autofac.Extensions.DependencyInjection.4.0.0-rc2-240.nupkg.sha512",
         "Autofac.Extensions.DependencyInjection.nuspec",
-        "lib/dotnet5.4/Autofac.Extensions.DependencyInjection.dll",
-        "lib/dotnet5.4/Autofac.Extensions.DependencyInjection.xml",
-        "lib/net451/Autofac.Extensions.DependencyInjection.dll",
-        "lib/net451/Autofac.Extensions.DependencyInjection.xml",
-        "lib/netcore50/Autofac.Extensions.DependencyInjection.dll",
-        "lib/netcore50/Autofac.Extensions.DependencyInjection.xml"
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.xml"
       ]
     },
     "Libuv/1.9.0-rc2-20901": {
@@ -9004,7 +8996,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Autofac.Extensions.DependencyInjection >= 4.0.0-rc1-177",
+      "Autofac.Extensions.DependencyInjection >= 4.0.0-rc2-240",
       "CQRS.Contracts >= 1.0.0-*",
       "CQRS.Infrastructure >= 1.0.0-*",
       "CQRS.Messaging >= 1.0.0-*",

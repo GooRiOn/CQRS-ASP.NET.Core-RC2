@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using CQRS.Messaging.Busses;
+using CQRS.Messaging.Busses.Interfaces;
 
 namespace CQRS.Messaging.DependencyInjection
 {
@@ -7,6 +9,8 @@ namespace CQRS.Messaging.DependencyInjection
         public static void Register(ContainerBuilder containerBuilder)
         {
             Domain.DependencyInjection.Registration.Register(containerBuilder);
+
+            containerBuilder.RegisterType<CommandBus>().As<ICommandBus>().SingleInstance();
         } 
     }
 }

@@ -5,8 +5,8 @@ using CQRS.Infrastructure.DependencyInjection.Interfaces;
 
 namespace CQRS.Domain.Factories
 {
-    public class CommandHandlerFactory<TCommand> : ICommandHandlerFactory<TCommand> where TCommand : class, ICommand
-    {
+    public class CommandHandlerFactory : ICommandHandlerFactory
+    { 
         ICustomDependencyResolver CustomDependencyResolver { get; }
 
         public CommandHandlerFactory(ICustomDependencyResolver customDependencyResolver)
@@ -14,7 +14,8 @@ namespace CQRS.Domain.Factories
             CustomDependencyResolver = customDependencyResolver;
         }
 
-        public ICommandHandler<TCommand> Get(TCommand command)
+        public ICommandHandler<TCommand> Get<TCommand>() where TCommand : class, ICommand
+    
         {
             return CustomDependencyResolver.Resolve<ICommandHandler<TCommand>>();
         }

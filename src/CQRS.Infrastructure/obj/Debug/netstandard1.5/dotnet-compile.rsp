@@ -1,5 +1,5 @@
---temp-output:C:\REPO\CQRS.Core\src\CQRS.Infrastructure\obj\Debug\netstandard1.5\
---out:C:\REPO\CQRS.Core\src\CQRS.Infrastructure\bin\Debug\netstandard1.5\CQRS.Infrastructure.dll
+--temp-output:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\obj\Debug\netstandard1.5\
+--out:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\bin\Debug\netstandard1.5\CQRS.Infrastructure.dll
 --define:DEBUG
 --define:TRACE
 --define:NETSTANDARD1_5
@@ -56,6 +56,6 @@
 --reference:C:\Users\dpawl\.nuget\packages\System.Threading.Timer\4.0.1-rc2-24027\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\dpawl\.nuget\packages\System.Xml.ReaderWriter\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\dpawl\.nuget\packages\System.Xml.XDocument\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.XDocument.dll
-C:\REPO\CQRS.Core\src\CQRS.Infrastructure\DependencyInjection\CustomDependencyResolver.cs
-C:\REPO\CQRS.Core\src\CQRS.Infrastructure\DependencyInjection\Interfaces\ICustomDependencyResolver.cs
-C:\REPO\CQRS.Core\src\CQRS.Infrastructure\Properties\AssemblyInfo.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\DependencyInjection\CustomDependencyResolver.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\DependencyInjection\Interfaces\ICustomDependencyResolver.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Properties\AssemblyInfo.cs

@@ -1,5 +1,5 @@
---temp-output:C:\REPO\CQRS.Core\src\CQRS.Domain\obj\Debug\netstandard1.5\
---out:C:\REPO\CQRS.Core\src\CQRS.Domain\bin\Debug\netstandard1.5\CQRS.Domain.dll
+--temp-output:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\obj\Debug\netstandard1.5\
+--out:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\bin\Debug\netstandard1.5\CQRS.Domain.dll
 --define:DEBUG
 --define:TRACE
 --define:NETSTANDARD1_5
@@ -56,11 +56,11 @@
 --reference:C:\Users\dpawl\.nuget\packages\System.Threading.Timer\4.0.1-rc2-24027\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\dpawl\.nuget\packages\System.Xml.ReaderWriter\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\dpawl\.nuget\packages\System.Xml.XDocument\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.XDocument.dll
---reference:C:\REPO\CQRS.Core\src\CQRS.Contracts\bin\Debug\netstandard1.5\CQRS.Contracts.dll
---reference:C:\REPO\CQRS.Core\src\CQRS.DataAccess\bin\Debug\netstandard1.5\CQRS.DataAccess.dll
---reference:C:\REPO\CQRS.Core\src\CQRS.Infrastructure\bin\Debug\netstandard1.5\CQRS.Infrastructure.dll
-C:\REPO\CQRS.Core\src\CQRS.Domain\CommandHandlers\Interfaces\ICommandHandler.cs
-C:\REPO\CQRS.Core\src\CQRS.Domain\DependencyInjection\Registration.cs
-C:\REPO\CQRS.Core\src\CQRS.Domain\Factories\CommandHandlerFactory.cs
-C:\REPO\CQRS.Core\src\CQRS.Domain\Factories\Interfaces\ICommandHandlerFactory.cs
-C:\REPO\CQRS.Core\src\CQRS.Domain\Properties\AssemblyInfo.cs
+--reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\bin\Debug\netstandard1.5\CQRS.Contracts.dll
+--reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\bin\Debug\netstandard1.5\CQRS.DataAccess.dll
+--reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\bin\Debug\netstandard1.5\CQRS.Infrastructure.dll
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CommandHandlers\Interfaces\ICommandHandler.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\DependencyInjection\Registration.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Factories\CommandHandlerFactory.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Factories\Interfaces\ICommandHandlerFactory.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Properties\AssemblyInfo.cs

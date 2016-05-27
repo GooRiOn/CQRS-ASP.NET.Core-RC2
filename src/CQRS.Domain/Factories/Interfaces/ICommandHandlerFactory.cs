@@ -3,8 +3,8 @@ using CQRS.Domain.CommandHandlers.Interfaces;
 
 namespace CQRS.Domain.Factories.Interfaces
 {
-    public interface ICommandHandlerFactory<in TCommand> where TCommand : class, ICommand
+    public interface ICommandHandlerFactory
     {
-        ICommandHandler<TCommand> Get(TCommand command);
+        ICommandHandler<TCommand> Get<TCommand>() where TCommand : class, ICommand;
     }
 }

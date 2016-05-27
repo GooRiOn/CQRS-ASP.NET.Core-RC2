@@ -10,7 +10,7 @@ namespace CQRS.Domain.DependencyInjection
         {
             CQRS.DataAccess.DependencyInjection.Registration.Register(containerBuilder);
 
-            containerBuilder.RegisterGeneric(typeof (CommandHandlerFactory<>)).As(typeof (ICommandHandlerFactory<>));
+            containerBuilder.RegisterType<CommandHandlerFactory>().As<ICommandHandlerFactory>();
         }
     }
 }
