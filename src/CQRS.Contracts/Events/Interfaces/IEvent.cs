@@ -4,6 +4,6 @@ namespace CQRS.Contracts.Events.Interfaces
 {
     public interface IEvent
     {
-        Guid Id { get; }
+        Guid AggregateId { get; }
     }
 }

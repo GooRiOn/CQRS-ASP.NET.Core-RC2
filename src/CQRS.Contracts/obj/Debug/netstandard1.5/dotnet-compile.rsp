@@ -51,5 +51,8 @@
 --reference:C:\Users\dpawl\.nuget\packages\System.Threading.Timer\4.0.1-rc2-24027\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\dpawl\.nuget\packages\System.Xml.ReaderWriter\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\dpawl\.nuget\packages\System.Xml.XDocument\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.XDocument.dll
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Commands\AddItemCommand.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Commands\Interfaces\ICommand.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\ItemAddedEvent.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\Interfaces\IEvent.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Properties\AssemblyInfo.cs

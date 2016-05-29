@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using CQRS.Messaging.Busses.Interfaces;
+using CQRS.Contracts.Commands;
 
 namespace CQRS.Controllers
 {
@@ -18,6 +19,8 @@ namespace CQRS.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            CommandBus.Send(new AddItemCommand {Name = "Item1", Quantity = 30 });
+
             return new string[] { "value1", "value2" };
         }
 

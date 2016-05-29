@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CQRS.Contracts.Events.Interfaces;
 
 namespace CQRS.Domain.EventHandlers.Interfaces
 {
-    interface IEventHandler
+    public interface IEventHandler<in TEvent> where TEvent : class, IEvent
     {
+        void Handle(TEvent @event);
     }
 }

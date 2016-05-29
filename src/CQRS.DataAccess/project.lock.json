@@ -1006,6 +1006,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "CQRS.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.5",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027"
+        },
+        "compile": {
+          "netstandard1.5/CQRS.Contracts.dll": {}
+        },
+        "runtime": {
+          "netstandard1.5/CQRS.Contracts.dll": {}
+        }
       }
     }
   },
@@ -3869,11 +3882,17 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "CQRS.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../CQRS.Contracts/project.json",
+      "msbuildProject": "../CQRS.Contracts/CQRS.Contracts.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
       "Autofac.Extensions.DependencyInjection >= 4.0.0-rc1-177",
+      "CQRS.Contracts >= 1.0.0-*",
       "NETStandard.Library >= 1.5.0-rc2-24027"
     ],
     ".NETStandard,Version=v1.5": []
