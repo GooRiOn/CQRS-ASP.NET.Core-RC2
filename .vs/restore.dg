@@ -1,3 +1,9 @@
+#:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\CQRS.Messaging.xproj
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\CQRS.Messaging.xproj|C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CQRS.Domain.xproj
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\CQRS.Messaging.xproj|C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\CQRS.Infrastructure.xproj
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CQRS.Domain.xproj|C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\CQRS.Contracts.xproj
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CQRS.Domain.xproj|C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\CQRS.DataAccess.xproj
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CQRS.Domain.xproj|C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\CQRS.Infrastructure.xproj
 #:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS\CQRS.Web.xproj
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS\CQRS.Web.xproj|C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\CQRS.Contracts.xproj
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS\CQRS.Web.xproj|C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\CQRS.Infrastructure.xproj
