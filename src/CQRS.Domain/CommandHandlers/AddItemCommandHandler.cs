@@ -3,6 +3,7 @@ using CQRS.DataAccess;
 using CQRS.Domain.Aggregates;
 using CQRS.Infrastructure.Interfaces.Busses;
 using CQRS.Infrastructure.Interfaces.Handlers;
+using System.Linq;
 
 namespace CQRS.Domain.CommandHandlers
 {
@@ -24,9 +25,9 @@ namespace CQRS.Domain.CommandHandlers
 
             EventSotre.Persist(item.GetUncommittedEvents());
 
-            var uncommittedEvents = item.GetUncommittedEvents();
+            var uncommittedEvent = item.GetUncommittedEvents().FirstOrDefault() ;
 
-            EventBus.Send(uncommittedEvents);
+            EventBus.Send(uncommittedEvent);
         }
     }
 }

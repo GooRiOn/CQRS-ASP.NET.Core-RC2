@@ -6,7 +6,8 @@ namespace CQRS.DependencyInjection
     {
         public static void Register(ContainerBuilder containerBuilder)
         {
-            CQRS.Messaging.DependencyInjection.Registration.Register(containerBuilder);
+            Messaging.DependencyInjection.Registration.Register(containerBuilder);
+            ReadSide.DependencyInjection.Registration.Register(containerBuilder);
         }
     }
 }

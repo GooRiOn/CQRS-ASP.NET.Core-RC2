@@ -14,10 +14,7 @@ namespace CQRS.Domain.Factories
             CustomDependencyResolver = customDependencyResolver;
         }
 
-        public ICommandHandler<TCommand> Get<TCommand>() where TCommand : class, ICommand
-    
-        {
-            return CustomDependencyResolver.Resolve<ICommandHandler<TCommand>>();
-        }
+        public ICommandHandler<TCommand> Get<TCommand>() where TCommand : class, ICommand =>  
+             CustomDependencyResolver.Resolve<ICommandHandler<TCommand>>();        
     }
 }

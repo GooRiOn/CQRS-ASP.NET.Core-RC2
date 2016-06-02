@@ -175,6 +175,7 @@
 -r:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\bin\Debug\netstandard1.5\CQRS.Domain.dll"
 -r:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\bin\Debug\netstandard1.5\CQRS.Infrastructure.dll"
 -r:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\bin\Debug\netstandard1.5\CQRS.Messaging.dll"
+-r:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.ReadSide\bin\Debug\netstandard1.5\CQRS.ReadSide.dll"
 -resource:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS\obj\Debug\netcoreapp1.0\CQRSdotnet-compile.deps.json",CQRS.deps.json
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS\Program.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS\Startup.cs"

@@ -21,6 +21,7 @@
           "CQRS.Contracts": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.Messaging": "1.0.0",
+          "CQRS.ReadSide": "1.0.0",
           "Microsoft.ApplicationInsights.AspNetCore": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
@@ -2515,6 +2516,16 @@
         "compile": {
           "CQRS.Messaging.dll": {}
         }
+      },
+      "CQRS.ReadSide/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "CQRS.Infrastructure": "1.0.0",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
+        },
+        "compile": {
+          "CQRS.ReadSide.dll": {}
+        }
       }
     },
     ".NETCoreApp,Version=v1.0/": {
@@ -2524,6 +2535,7 @@
           "CQRS.Contracts": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.Messaging": "1.0.0",
+          "CQRS.ReadSide": "1.0.0",
           "Microsoft.ApplicationInsights.AspNetCore": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
@@ -4888,6 +4900,16 @@
         "runtime": {
           "CQRS.Messaging.dll": {}
         }
+      },
+      "CQRS.ReadSide/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "CQRS.Infrastructure": "1.0.0",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
+        },
+        "runtime": {
+          "CQRS.ReadSide.dll": {}
+        }
       }
     }
   },
@@ -5873,6 +5895,11 @@
       "sha512": ""
     },
     "CQRS.Messaging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CQRS.ReadSide/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
