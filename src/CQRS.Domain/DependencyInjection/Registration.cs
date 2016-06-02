@@ -1,9 +1,9 @@
 ﻿using Autofac;
 using CQRS.Contracts.Commands;
 using CQRS.Domain.CommandHandlers;
-using CQRS.Domain.CommandHandlers.Interfaces;
 using CQRS.Domain.Factories;
-using CQRS.Domain.Factories.Interfaces;
+using CQRS.Infrastructure.Interfaces.Factories;
+using CQRS.Infrastructure.Interfaces.Handlers;
 
 namespace CQRS.Domain.DependencyInjection
 {

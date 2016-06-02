@@ -676,10 +676,20 @@
       },
       "CQRS.Contracts/1.0.0": {
         "dependencies": {
+          "CQRS.Infrastructure": "1.0.0",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "runtime": {
           "CQRS.Contracts.dll": {}
+        }
+      },
+      "CQRS.Infrastructure/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+        },
+        "runtime": {
+          "CQRS.Infrastructure.dll": {}
         }
       }
     }
@@ -1031,6 +1041,11 @@
       "sha512": "sha512-e2rpl8sRIEw2YiizX6CzL/g7BU9OeIRXdsuVAL3DWDFBsYrLac+Wcdn1HM1bHhrZ8Gbw+KmFQBMtnXHzv+xGsA=="
     },
     "CQRS.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CQRS.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

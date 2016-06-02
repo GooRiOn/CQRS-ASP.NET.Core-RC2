@@ -1,7 +1,7 @@
 ﻿using CQRS.Contracts.Commands;
 using CQRS.DataAccess;
 using CQRS.Domain.Aggregates;
-using CQRS.Domain.CommandHandlers.Interfaces;
+using CQRS.Infrastructure.Interfaces.Handlers;
 
 namespace CQRS.Domain.CommandHandlers
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-using CQRS.Contracts.Commands.Interfaces;
+using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Contracts.Commands
 {

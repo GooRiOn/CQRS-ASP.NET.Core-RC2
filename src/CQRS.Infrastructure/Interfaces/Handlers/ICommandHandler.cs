@@ -1,6 +1,6 @@
-﻿using CQRS.Contracts.Commands.Interfaces;
+﻿using CQRS.Infrastructure.Interfaces.Contracts;
 
-namespace CQRS.Domain.CommandHandlers.Interfaces
+namespace CQRS.Infrastructure.Interfaces.Handlers
 {
     public interface ICommandHandler<in TCommand> where TCommand : class, ICommand
     {

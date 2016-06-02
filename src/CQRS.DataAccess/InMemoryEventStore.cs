@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using CQRS.Contracts.Events.Interfaces;
 using System;
+using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.DataAccess
 {

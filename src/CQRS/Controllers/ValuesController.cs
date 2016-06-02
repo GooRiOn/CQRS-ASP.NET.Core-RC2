@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using CQRS.Messaging.Busses.Interfaces;
 using CQRS.Contracts.Commands;
+using CQRS.Infrastructure.Interfaces.Busses;
 
 namespace CQRS.Controllers
 {

@@ -1,5 +1,7 @@
 [Oo]bj/
 [Bb]in/
 _ReSharper.*
-*.user
-*.suo
+.user/
+.suo/
+.vs/
+packages/

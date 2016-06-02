@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
-using CQRS.Contracts.Commands.Interfaces;
+using CQRS.Infrastructure.Interfaces.Contracts;
 
-namespace CQRS.Messaging.Busses.Interfaces
+
+namespace CQRS.Infrastructure.Interfaces.Busses
 {
     public interface ICommandBus
     {

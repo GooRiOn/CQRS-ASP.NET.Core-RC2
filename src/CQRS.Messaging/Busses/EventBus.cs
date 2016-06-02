@@ -1,9 +1,7 @@
-﻿using System;
-using System.Reflection;
+﻿using CQRS.Infrastructure.Interfaces.Busses;
+using CQRS.Infrastructure.Interfaces.Contracts;
+using CQRS.Infrastructure.Interfaces.Factories;
 using System.Threading.Tasks;
-using CQRS.Contracts.Events.Interfaces;
-using CQRS.Domain.Factories.Interfaces;
-using CQRS.Messaging.Busses.Interfaces;
 
 namespace CQRS.Messaging.Busses
 {

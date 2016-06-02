@@ -1,6 +1,7 @@
-﻿using CQRS.Contracts.Events.Interfaces;
+﻿
+using CQRS.Infrastructure.Interfaces.Contracts;
 
-namespace CQRS.Domain.EventHandlers.Interfaces
+namespace CQRS.Infrastructure.Interfaces.Handlers
 {
     public interface IEventHandler<in TEvent> where TEvent : class, IEvent
     {

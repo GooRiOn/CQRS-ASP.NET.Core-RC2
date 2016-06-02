@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using CQRS.Messaging.Busses;
-using CQRS.Messaging.Busses.Interfaces;
+using CQRS.Infrastructure.Interfaces.Busses;
 
 namespace CQRS.Messaging.DependencyInjection
 {

@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
-using CQRS.Contracts.Commands.Interfaces;
-using CQRS.Domain.Factories.Interfaces;
-using CQRS.Messaging.Busses.Interfaces;
+using CQRS.Infrastructure.Interfaces.Factories;
+using CQRS.Infrastructure.Interfaces.Busses;
+using CQRS.Infrastructure.Interfaces.Contracts;
+
 
 namespace CQRS.Messaging.Busses
 {

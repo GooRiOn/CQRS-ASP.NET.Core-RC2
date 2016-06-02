@@ -62,7 +62,5 @@
 --reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\bin\Debug\netstandard1.5\CQRS.Infrastructure.dll
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\Busses\CommandBus.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\Busses\EventBus.cs
-C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\Busses\Interfaces\ICommandBus.cs
-C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\Busses\Interfaces\IEventBus.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\DependencyInjection\Registration.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Messaging\Properties\AssemblyInfo.cs

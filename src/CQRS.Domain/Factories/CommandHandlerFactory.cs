@@ -1,7 +1,7 @@
-﻿using CQRS.Contracts.Commands.Interfaces;
-using CQRS.Domain.CommandHandlers.Interfaces;
-using CQRS.Domain.Factories.Interfaces;
-using CQRS.Infrastructure.DependencyInjection.Interfaces;
+﻿using CQRS.Infrastructure.DependencyInjection.Interfaces.DependencyInjection;
+using CQRS.Infrastructure.Interfaces.Contracts;
+using CQRS.Infrastructure.Interfaces.Factories;
+using CQRS.Infrastructure.Interfaces.Handlers;
 
 namespace CQRS.Domain.Factories
 {
