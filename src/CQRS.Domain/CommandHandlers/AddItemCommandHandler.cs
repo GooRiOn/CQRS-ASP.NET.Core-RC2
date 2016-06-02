@@ -1,6 +1,7 @@
 ﻿using CQRS.Contracts.Commands;
 using CQRS.DataAccess;
 using CQRS.Domain.Aggregates;
+using CQRS.Infrastructure.Interfaces.Busses;
 using CQRS.Infrastructure.Interfaces.Handlers;
 
 namespace CQRS.Domain.CommandHandlers
@@ -8,10 +9,12 @@ namespace CQRS.Domain.CommandHandlers
     public class AddItemCommandHandler : ICommandHandler<AddItemCommand>
     {
         IInMemoryEventSotre EventSotre { get; }
-
-        public AddItemCommandHandler(IInMemoryEventSotre eventStore)
+        IEventBus EventBus { get; }
+ 
+        public AddItemCommandHandler(IInMemoryEventSotre eventStore, IEventBus eventBus)
         {
             EventSotre = eventStore;
+            EventBus = eventBus;
         }
 
         public void Handle(AddItemCommand command)
@@ -21,7 +24,9 @@ namespace CQRS.Domain.CommandHandlers
 
             EventSotre.Persist(item.GetUncommittedEvents());
 
-            //send event to event bus
+            var uncommittedEvents = item.GetUncommittedEvents();
+
+            EventBus.Send(uncommittedEvents);
         }
     }
 }

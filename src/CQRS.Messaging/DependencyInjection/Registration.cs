@@ -11,6 +11,8 @@ namespace CQRS.Messaging.DependencyInjection
             Domain.DependencyInjection.Registration.Register(containerBuilder);
 
             containerBuilder.RegisterType<CommandBus>().As<ICommandBus>().SingleInstance();
+
+            containerBuilder.RegisterType<EventBus>().As<IEventBus>().SingleInstance();
         } 
     }
 }

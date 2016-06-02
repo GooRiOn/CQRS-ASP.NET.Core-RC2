@@ -20,7 +20,7 @@ namespace CQRS.Domain.Aggregates
                 AggregateId = id,
                 Name = name,
                 Quantity = quantity
-            });
+            });            
         }
 
         public override void LoadFromHistory(IEnumerable<IEvent> events)

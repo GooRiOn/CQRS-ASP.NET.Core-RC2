@@ -1,6 +1,7 @@
 ﻿using CQRS.Infrastructure.Interfaces.Busses;
 using CQRS.Infrastructure.Interfaces.Contracts;
 using CQRS.Infrastructure.Interfaces.Factories;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CQRS.Messaging.Busses
@@ -21,6 +22,14 @@ namespace CQRS.Messaging.Busses
             var eventHandler = EventHandlerFactory.Get<TEvent>();
 
             eventHandler.Handle(@event);
+        }
+
+        public void Send<TEvent>(IEnumerable<TEvent> events) where TEvent : class, IEvent
+        {
+            var eventHandler = EventHandlerFactory.Get<TEvent>();
+
+            foreach(var @event in events)
+                eventHandler.Handle(@event);
         }
 
         public Task SendAsync<TEvent>(TEvent @event) where TEvent : class, IEvent
