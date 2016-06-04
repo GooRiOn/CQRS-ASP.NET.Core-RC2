@@ -1,4 +1,4 @@
-{
+﻿{
   "version": "1.0.0-*",
 
   "dependencies": {
@@ -11,7 +11,10 @@
 
   "frameworks": {
     "netstandard1.5": {
-      "imports": "dnxcore50"
+      "imports": [
+        "dnxcore50",
+        "portable-net452+win81"
+      ]
     }
   }
 }

@@ -25,29 +25,35 @@ namespace CQRS.Messaging.Busses
 
         public void Send<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
-            var eventType = @event.GetType();
-            var eventHandlerFactoryType = EventHandlerFactory.GetType();
-
-            var eventHandler = (IEventHandler<TEvent>) eventHandlerFactoryType
-                .GetMethod(nameof(IEventHandlerFactory.Get))
-                .MakeGenericMethod(eventType)
-                .Invoke(EventHandlerFactory, new object[] { });
-
+            var eventHandler = GetEventHandler(@event);
             eventHandler.Handle(@event);
         }
 
         public void Send<TEvent>(IEnumerable<TEvent> events) where TEvent : class, IEvent
         {
-            //var a = test.Resolve<IEventHandler<TEvent>>();
-            var eventHandler = EventHandlerFactory.Get<TEvent>();
-
             foreach(var @event in events)
+            {
+                var eventHandler = GetEventHandler(@event);
                 eventHandler.Handle(@event);
+            }
         }
 
         public Task SendAsync<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
             throw new System.NotImplementedException();
+        }
+
+        private IEventHandler<TEvent> GetEventHandler<TEvent>(TEvent @event) where TEvent : class, IEvent
+        {
+            var eventType = @event.GetType();
+            var eventHandlerFactoryType = EventHandlerFactory.GetType();
+
+            var eventHandler = (IEventHandler<TEvent>)eventHandlerFactoryType
+                .GetMethod(nameof(IEventHandlerFactory.Get))
+                .MakeGenericMethod(eventType)
+                .Invoke(EventHandlerFactory, new object[] { });
+
+            return eventHandler;
         }
     }
 }
