@@ -1,5 +1,5 @@
-﻿using CQRS.Infrastructure.DependencyInjection.Interfaces.DependencyInjection;
-using CQRS.Infrastructure.Interfaces.Contracts;
+﻿using CQRS.Infrastructure.Interfaces.Contracts;
+using CQRS.Infrastructure.Interfaces.DependencyInjection;
 using CQRS.Infrastructure.Interfaces.Factories;
 using CQRS.Infrastructure.Interfaces.Handlers;
 

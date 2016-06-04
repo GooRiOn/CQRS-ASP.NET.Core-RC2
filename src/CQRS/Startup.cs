@@ -1,13 +1,14 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using CQRS.DependencyInjection;
+using CQRS.Infrastructure.DependencyInjection;
+using CQRS.Infrastructure.Interfaces.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using CQRS.Infrastructure.DependencyInjection;
 
 namespace CQRS
 {
@@ -52,7 +53,7 @@ namespace CQRS
 
             var customDependencyConatinerBuilder = new ContainerBuilder();
 
-            customDependencyConatinerBuilder.RegisterInstance<Infrastructure.DependencyInjection.Interfaces.DependencyInjection.ICustomDependencyResolver>(new CustomDependencyResolver(container));
+            customDependencyConatinerBuilder.RegisterInstance<ICustomDependencyResolver>(new CustomDependencyResolver(container));
 
             customDependencyConatinerBuilder.Update(container);
 

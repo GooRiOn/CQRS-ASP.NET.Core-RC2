@@ -1,4 +1,5 @@
 ﻿using CQRS.Contracts.Commands;
+using CQRS.Contracts.Events;
 using CQRS.DataAccess;
 using CQRS.Domain.Aggregates;
 using CQRS.Infrastructure.Interfaces.Busses;
@@ -25,7 +26,7 @@ namespace CQRS.Domain.CommandHandlers
 
             EventSotre.Persist(item.GetUncommittedEvents());
 
-            var uncommittedEvent = item.GetUncommittedEvents().FirstOrDefault() ;
+            var uncommittedEvent = item.GetUncommittedEvents().FirstOrDefault() as ItemAddedEvent;
 
             EventBus.Send(uncommittedEvent);
         }
