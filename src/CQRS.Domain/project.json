@@ -6,15 +6,12 @@
     "CQRS.Infrastructure": "1.0.0-*",
     "CQRS.DataAccess": "1.0.0-*",
     "CQRS.Contracts": "1.0.0-*",
-    "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177"
+    "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
   },
 
   "frameworks": {
-    "netstandard1.5": {
-      "imports": [
-        "dnxcore50",
-        "portable-net452+win81"
-      ]
+    "netcoreapp1.0": {
+      "imports": "portable-net451+win8"
     }
   }
 }

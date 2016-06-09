@@ -849,7 +849,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.VisualBasic.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1-rc2-24027": {
@@ -879,6 +879,23 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
+      "Microsoft.DotNet.Cli.Utils/1.0.0-preview1-002702": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
+          "NuGet.Frameworks": "3.5.0-beta-final",
+          "NuGet.Packaging": "3.5.0-beta-final",
+          "NuGet.ProjectModel": "3.5.0-beta-final",
+          "NuGet.Versioning": "3.5.0-beta-final",
+          "System.Diagnostics.Process": "4.1.0-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.DotNet.Cli.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.DotNet.Cli.Utils.dll": {}
+        }
+      },
       "Microsoft.DotNet.InternalAbstractions/1.0.0-rc2-002702": {
         "type": "package",
         "dependencies": {
@@ -896,6 +913,29 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll": {}
+        }
+      },
+      "Microsoft.DotNet.ProjectModel/1.0.0-rc2-002702": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.1-rc2-24027",
+          "Microsoft.Extensions.DependencyModel": "1.0.0-rc2-002702",
+          "Newtonsoft.Json": "7.0.1",
+          "NuGet.Packaging": "3.5.0-beta-final",
+          "NuGet.RuntimeModel": "3.5.0-beta-final",
+          "System.Dynamic.Runtime": "4.0.11-rc2-24027",
+          "System.Reflection.Metadata": "1.3.0-rc2-24027",
+          "System.Runtime.Loader": "4.0.0-rc2-24027",
+          "System.Runtime.Serialization.Primitives": "4.1.1-rc2-24027",
+          "System.Security.Cryptography.Algorithms": "4.1.0-rc2-24027",
+          "System.Threading.Thread": "4.0.0-rc2-24027",
+          "System.Xml.XDocument": "4.0.11-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.DotNet.ProjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/1.0.0-rc2-final": {
@@ -936,6 +976,18 @@
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.0.0-rc2-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.SqlServer/1.0.0-rc2-final": {
         "type": "package",
         "dependencies": {
@@ -948,6 +1000,55 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/1.0.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.EntityFrameworkCore.Tools.Cli": "1.0.0-preview1-final",
+          "Microsoft.EntityFrameworkCore.Tools.Core": "1.0.0-rc2-final",
+          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
+          "Microsoft.NETCore.App": "1.0.0-rc2-3002702"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/dotnet-ef.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/dotnet-ef.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools.Cli/1.0.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview1-002702",
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
+          "Microsoft.EntityFrameworkCore.Tools.Core": "1.0.0-rc2-final",
+          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
+          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
+          "Microsoft.NETCore.App": "1.0.0-rc2-3002702"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Tools.Cli.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Tools.Cli.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools.Core/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.0.0-rc2-final",
+          "System.Collections.NonGeneric": "4.0.1-rc2-24027",
+          "System.IO": "4.1.0-rc2-24027",
+          "System.IO.FileSystem": "4.0.1-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Tools.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Tools.Core.dll": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/1.0.0-rc2-final": {
@@ -979,6 +1080,22 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
+      "Microsoft.Extensions.CommandLineUtils/1.0.0-rc2-final": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11-rc2-24027",
+          "System.Console": "4.0.0-rc2-24027",
+          "System.IO": "4.1.0-rc2-24027",
+          "System.Linq": "4.1.0-rc2-24027",
+          "System.Resources.ResourceManager": "4.0.1-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/1.0.0-rc2-final": {
@@ -1509,7 +1626,7 @@
           "ref/netstandard1.1/Microsoft.VisualBasic.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.VisualBasic.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.0.1-rc2-24027": {
@@ -1598,6 +1715,212 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NuGet.Common/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "System.Diagnostics.Process": "4.1.0-rc2-24027",
+          "System.Security.Cryptography.Algorithms": "4.1.0-rc2-24027",
+          "System.Threading.Thread": "4.0.0-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Common.dll": {}
+        }
+      },
+      "NuGet.Configuration/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Common": "3.5.0-beta-final",
+          "System.Xml.XDocument": "4.0.11-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Configuration.dll": {}
+        }
+      },
+      "NuGet.DependencyResolver.Core/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Frameworks": "3.5.0-beta-final",
+          "NuGet.LibraryModel": "3.5.0-beta-final",
+          "NuGet.Protocol.Core.v3": "3.5.0-beta-final",
+          "NuGet.Repositories": "3.5.0-beta-final",
+          "NuGet.RuntimeModel": "3.5.0-beta-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.DependencyResolver.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.DependencyResolver.Core.dll": {}
+        }
+      },
+      "NuGet.Frameworks/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Versioning": "3.5.0-beta-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Frameworks.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NuGet.LibraryModel/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Frameworks": "3.5.0-beta-final",
+          "NuGet.Versioning": "3.5.0-beta-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.LibraryModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.LibraryModel.dll": {}
+        }
+      },
+      "NuGet.Packaging/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Common": "3.5.0-beta-final",
+          "NuGet.Packaging.Core": "3.5.0-beta-final",
+          "System.IO.Compression": "4.1.0-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Packaging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Packaging.dll": {}
+        }
+      },
+      "NuGet.Packaging.Core/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Packaging.Core.Types": "3.5.0-beta-final",
+          "System.Xml.XDocument": "4.0.11-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.dll": {}
+        }
+      },
+      "NuGet.Packaging.Core.Types/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Frameworks": "3.5.0-beta-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.Types.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.Types.dll": {}
+        }
+      },
+      "NuGet.ProjectModel/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "Newtonsoft.Json": "6.0.4",
+          "NuGet.DependencyResolver.Core": "3.5.0-beta-final",
+          "System.Dynamic.Runtime": "4.0.11-rc2-24027",
+          "System.Threading.Thread": "4.0.0-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.ProjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.ProjectModel.dll": {}
+        }
+      },
+      "NuGet.Protocol.Core.Types/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Common": "3.5.0-beta-final",
+          "NuGet.Configuration": "3.5.0-beta-final",
+          "NuGet.Packaging": "3.5.0-beta-final",
+          "System.Net.Http": "4.0.1-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Protocol.Core.Types.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Protocol.Core.Types.dll": {}
+        }
+      },
+      "NuGet.Protocol.Core.v3/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "Newtonsoft.Json": "6.0.4",
+          "NuGet.Common": "3.5.0-beta-final",
+          "NuGet.Packaging": "3.5.0-beta-final",
+          "NuGet.Protocol.Core.Types": "3.5.0-beta-final",
+          "System.Dynamic.Runtime": "4.0.11-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Protocol.Core.v3.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Protocol.Core.v3.dll": {}
+        }
+      },
+      "NuGet.Repositories/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "NuGet.Packaging": "3.5.0-beta-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Repositories.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Repositories.dll": {}
+        }
+      },
+      "NuGet.RuntimeModel/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "Newtonsoft.Json": "6.0.4",
+          "NuGet.Frameworks": "3.5.0-beta-final",
+          "NuGet.Versioning": "3.5.0-beta-final",
+          "System.Dynamic.Runtime": "4.0.11-rc2-24027",
+          "System.ObjectModel": "4.0.12-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.RuntimeModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.RuntimeModel.dll": {}
+        }
+      },
+      "NuGet.Versioning/3.5.0-beta-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.5.0-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.0/NuGet.Versioning.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/NuGet.Versioning.dll": {}
         }
       },
       "Remotion.Linq/2.0.2": {
@@ -1737,7 +2060,7 @@
           "System.Threading": "4.0.11-rc2-24027"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.NonGeneric.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
@@ -1758,7 +2081,7 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Collections.Specialized.dll": {}
         }
       },
       "System.ComponentModel/4.0.1-rc2-24027": {
@@ -2007,7 +2330,15 @@
           "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win7/lib/netstandard1.4/_._": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx.10.10/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "osx.10.10"
+          },
+          "runtimes/win7/lib/netstandard1.4/System.Diagnostics.Process.dll": {
             "assetType": "runtime",
             "rid": "win7"
           }
@@ -2270,9 +2601,13 @@
           "ref/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {
             "assetType": "runtime",
             "rid": "unix"
+          },
+          "runtimes/win7/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {
+            "assetType": "runtime",
+            "rid": "win7"
           }
         }
       },
@@ -2325,7 +2660,7 @@
           "ref/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         }
       },
       "System.Linq/4.1.0-rc2-24027": {
@@ -2390,7 +2725,7 @@
           "ref/netstandard1.1/System.Linq.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
       "System.Linq.Queryable/4.0.1-rc2-24027": {
@@ -2519,9 +2854,13 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.Requests.dll": {
             "assetType": "runtime",
             "rid": "unix"
+          },
+          "runtimes/win7/lib/netstandard1.3/System.Net.Requests.dll": {
+            "assetType": "runtime",
+            "rid": "win7"
           }
         }
       },
@@ -2593,7 +2932,7 @@
           "ref/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         }
       },
       "System.Net.WebSockets/4.0.0-rc2-24027": {
@@ -2674,7 +3013,7 @@
           "ref/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         }
       },
       "System.Reflection.Emit/4.0.1-rc2-24027": {
@@ -3346,7 +3685,7 @@
           "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.0.0-rc2-24027": {
@@ -3528,96 +3867,98 @@
       },
       "CQRS.Contracts/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.5",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
           "CQRS.Infrastructure": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "compile": {
-          "netstandard1.5/CQRS.Contracts.dll": {}
+          "netcoreapp1.0/CQRS.Contracts.dll": {}
         },
         "runtime": {
-          "netstandard1.5/CQRS.Contracts.dll": {}
+          "netcoreapp1.0/CQRS.Contracts.dll": {}
         }
       },
       "CQRS.DataAccess/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.5",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
           "CQRS.Contracts": "1.0.0",
           "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "compile": {
-          "netstandard1.5/CQRS.DataAccess.dll": {}
+          "netcoreapp1.0/CQRS.DataAccess.dll": {}
         },
         "runtime": {
-          "netstandard1.5/CQRS.DataAccess.dll": {}
+          "netcoreapp1.0/CQRS.DataAccess.dll": {}
         }
       },
       "CQRS.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.5",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
           "CQRS.Contracts": "1.0.0",
           "CQRS.DataAccess": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "compile": {
-          "netstandard1.5/CQRS.Domain.dll": {}
+          "netcoreapp1.0/CQRS.Domain.dll": {}
         },
         "runtime": {
-          "netstandard1.5/CQRS.Domain.dll": {}
+          "netcoreapp1.0/CQRS.Domain.dll": {}
         }
       },
       "CQRS.Infrastructure/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.5",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
+          "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "compile": {
-          "netstandard1.5/CQRS.Infrastructure.dll": {}
+          "netcoreapp1.0/CQRS.Infrastructure.dll": {}
         },
         "runtime": {
-          "netstandard1.5/CQRS.Infrastructure.dll": {}
+          "netcoreapp1.0/CQRS.Infrastructure.dll": {}
         }
       },
       "CQRS.Messaging/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.5",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
           "CQRS.Domain": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
           "NETStandard.Library": "1.5.0-rc2-24027",
           "System.Reflection.TypeExtensions": "4.1.0-rc2-24027"
         },
         "compile": {
-          "netstandard1.5/CQRS.Messaging.dll": {}
+          "netcoreapp1.0/CQRS.Messaging.dll": {}
         },
         "runtime": {
-          "netstandard1.5/CQRS.Messaging.dll": {}
+          "netcoreapp1.0/CQRS.Messaging.dll": {}
         }
       },
       "CQRS.ReadSide/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.5",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc1-177",
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
           "CQRS.Infrastructure": "1.0.0",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "compile": {
-          "netstandard1.5/CQRS.ReadSide.dll": {}
+          "netcoreapp1.0/CQRS.ReadSide.dll": {}
         },
         "runtime": {
-          "netstandard1.5/CQRS.ReadSide.dll": {}
+          "netcoreapp1.0/CQRS.ReadSide.dll": {}
         }
       }
     }
@@ -4255,6 +4596,16 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "Microsoft.DotNet.Cli.Utils/1.0.0-preview1-002702": {
+      "sha512": "/0HCuW5md8HOZ/QznFhjKIWqgDLB5cpFFGnhGByxo9exzWtH8+uGvyjtSJq/pGSVJWLtyjj9YXyohCZ20B9+VA==",
+      "type": "package",
+      "files": [
+        "Microsoft.DotNet.Cli.Utils.1.0.0-preview1-002702.nupkg.sha512",
+        "Microsoft.DotNet.Cli.Utils.nuspec",
+        "lib/net451/Microsoft.DotNet.Cli.Utils.dll",
+        "lib/netstandard1.5/Microsoft.DotNet.Cli.Utils.dll"
+      ]
+    },
     "Microsoft.DotNet.InternalAbstractions/1.0.0-rc2-002702": {
       "sha512": "81Zp6K3oJY5zyoCtf7eguaZ+EnM3zawCtUKszBCLob1KH6Bu44ET2hokkk/6eMhTI2aQhbGrV9SaSjJ2K8DUDg==",
       "type": "package",
@@ -4263,6 +4614,16 @@
         "Microsoft.DotNet.InternalAbstractions.nuspec",
         "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
         "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll"
+      ]
+    },
+    "Microsoft.DotNet.ProjectModel/1.0.0-rc2-002702": {
+      "sha512": "ryslqqMpPRcJma9kJn3V1/GydzUny6i6xfpQ0cqfWmlPdSQ9Hnh6x2l8yVqU+ueCiVffKWn/Or80moLwroXP/A==",
+      "type": "package",
+      "files": [
+        "Microsoft.DotNet.ProjectModel.1.0.0-rc2-002702.nupkg.sha512",
+        "Microsoft.DotNet.ProjectModel.nuspec",
+        "lib/net451/Microsoft.DotNet.ProjectModel.dll",
+        "lib/netstandard1.5/Microsoft.DotNet.ProjectModel.dll"
       ]
     },
     "Microsoft.EntityFrameworkCore/1.0.0-rc2-final": {
@@ -4293,6 +4654,20 @@
         "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.xml"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0-rc2-final": {
+      "sha512": "3AcZmXbF7vIQc+l1UQ/6oiP/xTJGEZkyc8CURSXx2JLtUh5AhTnuzy/zqf5s6AgisOpkc0gDdsPiqqk+94cXhQ==",
+      "type": "package",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Relational.Design.1.0.0-rc2-final.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Relational.Design.nuspec",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.xml",
+        "lib/netcore50/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/netcore50/Microsoft.EntityFrameworkCore.Relational.Design.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.xml"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.SqlServer/1.0.0-rc2-final": {
       "sha512": "5BJ9VrgVbP/OqIuRow8nZkwbtr5CKjCyQGaXsBLZbzL8LZRkY1rb8kWYBusTJeZ2LjnnV0liQeNPRs3C15pIPQ==",
       "type": "package",
@@ -4303,6 +4678,56 @@
         "lib/net451/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.xml"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/1.0.0-preview1-final": {
+      "sha512": "X+XFJwnjr+Bxf+H2ZgHlceVJf6AJDrD+MXyGpjpmdcLb8gKY33uzRIcxJNm2OI9oY3/BBecRaImHnOpjP3Zkzg==",
+      "type": "package",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Tools.1.0.0-preview1-final.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Tools.nuspec",
+        "build/netcore50/Microsoft.EntityFrameworkCore.Tools.props",
+        "build/netcore50/Microsoft.EntityFrameworkCore.Tools.targets",
+        "lib/net451/Microsoft.EntityFrameworkCore.Tools.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.Tools.xml",
+        "lib/netcore50/Microsoft.EntityFrameworkCore.Tools.dll",
+        "lib/netcore50/Microsoft.EntityFrameworkCore.Tools.xml",
+        "lib/netcoreapp1.0/dotnet-ef.dll",
+        "lib/netcoreapp1.0/dotnet-ef.runtimeconfig.json",
+        "lib/netcoreapp1.0/dotnet-ef.xml",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/OperationHandlers.cs",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools.Cli/1.0.0-preview1-final": {
+      "sha512": "rB+lVCt2vZ7ASHweT2ltuNMPR2xLA45WL2CGmQtrR+ZUoVB++WJLGIDQxisKRcViDA5huwpZkcXW0R0kPSlE9g==",
+      "type": "package",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Tools.Cli.1.0.0-preview1-final.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Tools.Cli.nuspec",
+        "lib/net451/Microsoft.EntityFrameworkCore.Tools.Cli.exe",
+        "lib/net451/Microsoft.EntityFrameworkCore.Tools.Cli.xml",
+        "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Tools.Cli.dll",
+        "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Tools.Cli.runtimeconfig.json",
+        "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Tools.Cli.xml"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools.Core/1.0.0-rc2-final": {
+      "sha512": "0L30NEnJaFdbc8a+B9nLb2kkMfnz94RFvJ8JWlO1u73wRChEafB7wLozyhCJFZziEEp8IbFYTzF3omR6gDfsmA==",
+      "type": "package",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Tools.Core.1.0.0-rc2-final.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Tools.Core.nuspec",
+        "lib/net451/Microsoft.EntityFrameworkCore.Tools.Core.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.Tools.Core.xml",
+        "lib/netcore50/Microsoft.EntityFrameworkCore.Tools.Core.dll",
+        "lib/netcore50/Microsoft.EntityFrameworkCore.Tools.Core.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Tools.Core.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Tools.Core.xml"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/1.0.0-rc2-final": {
@@ -4329,6 +4754,18 @@
         "lib/netcore50/Microsoft.Extensions.Caching.Memory.xml",
         "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.dll",
         "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.xml"
+      ]
+    },
+    "Microsoft.Extensions.CommandLineUtils/1.0.0-rc2-final": {
+      "sha512": "W27sd1qlG76lEs/TD6PUJKcJJ572v/WrMtHq8VrHKOcI7NwkTgOaayt+/Mh6Zr7a+EIAAITPOFjKjUiPDEPn+g==",
+      "type": "package",
+      "files": [
+        "Microsoft.Extensions.CommandLineUtils.1.0.0-rc2-final.nupkg.sha512",
+        "Microsoft.Extensions.CommandLineUtils.nuspec",
+        "lib/net451/Microsoft.Extensions.CommandLineUtils.dll",
+        "lib/net451/Microsoft.Extensions.CommandLineUtils.xml",
+        "lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.dll",
+        "lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.xml"
       ]
     },
     "Microsoft.Extensions.Configuration/1.0.0-rc2-final": {
@@ -4864,6 +5301,174 @@
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "NuGet.Common/3.5.0-beta-final": {
+      "sha512": "7eCg4ky9NtTnxY1+2VtDKIYX137QejH8Dsuw6fENU53N6OeoROsrv1MUm0pu4e3TF8VH1eL5G3Vx/G30VdXEDg==",
+      "type": "package",
+      "files": [
+        "NuGet.Common.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Common.nuspec",
+        "lib/net45/NuGet.Common.dll",
+        "lib/net45/NuGet.Common.xml",
+        "lib/netstandard1.3/NuGet.Common.dll",
+        "lib/netstandard1.3/NuGet.Common.xml"
+      ]
+    },
+    "NuGet.Configuration/3.5.0-beta-final": {
+      "sha512": "XNEuz+JnexgJ+awG5laoKpjbQY62eeSWvpWyNAZs9tVm2Y2Qz2P6o5jYkSfteq1USp672e0G41gcD/XM0XR1Qw==",
+      "type": "package",
+      "files": [
+        "NuGet.Configuration.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Configuration.nuspec",
+        "lib/net45/NuGet.Configuration.dll",
+        "lib/net45/NuGet.Configuration.xml",
+        "lib/netstandard1.3/NuGet.Configuration.dll",
+        "lib/netstandard1.3/NuGet.Configuration.xml"
+      ]
+    },
+    "NuGet.DependencyResolver.Core/3.5.0-beta-final": {
+      "sha512": "0K284c0Q9u7ibCLE+NUqNe4p0BkSCVyMzWNYYxGY7ehujGUnEC+yGohFpyAu0RPt5bVBCzsbWNe+hXeDoQsjSg==",
+      "type": "package",
+      "files": [
+        "NuGet.DependencyResolver.Core.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.DependencyResolver.Core.nuspec",
+        "lib/net45/NuGet.DependencyResolver.Core.dll",
+        "lib/net45/NuGet.DependencyResolver.Core.xml",
+        "lib/netstandard1.3/NuGet.DependencyResolver.Core.dll",
+        "lib/netstandard1.3/NuGet.DependencyResolver.Core.xml"
+      ]
+    },
+    "NuGet.Frameworks/3.5.0-beta-final": {
+      "sha512": "Si7O1OFxUryBq3xuq2AIwADM8WUMIBQOmUdTJBSaxV+KesShLJfgrr7Dl+Tg/nVETSEArJS8ktscv7gjKqtosg==",
+      "type": "package",
+      "files": [
+        "NuGet.Frameworks.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Frameworks.nuspec",
+        "lib/net45/NuGet.Frameworks.dll",
+        "lib/net45/NuGet.Frameworks.xml",
+        "lib/netstandard1.3/NuGet.Frameworks.dll",
+        "lib/netstandard1.3/NuGet.Frameworks.xml"
+      ]
+    },
+    "NuGet.LibraryModel/3.5.0-beta-final": {
+      "sha512": "Q/lVn/2Vg2wDiFMD8BwvzmPGw0gEusTt+cqIZ8KNICqUPJ94ICBOZRuEebKmTD/+azrqudDr/ZkI8q7hqLVhaQ==",
+      "type": "package",
+      "files": [
+        "NuGet.LibraryModel.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.LibraryModel.nuspec",
+        "lib/net45/NuGet.LibraryModel.dll",
+        "lib/net45/NuGet.LibraryModel.xml",
+        "lib/netstandard1.3/NuGet.LibraryModel.dll",
+        "lib/netstandard1.3/NuGet.LibraryModel.xml"
+      ]
+    },
+    "NuGet.Packaging/3.5.0-beta-final": {
+      "sha512": "wJSrtokTPmpIkNhJLiG5GPxdRFCVl6XB3MmgLCyRhD2O2wZVQqvvL6SELOz/61EU0C8m9ni/UiiNRqTEtH5QZw==",
+      "type": "package",
+      "files": [
+        "NuGet.Packaging.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Packaging.nuspec",
+        "lib/net45/NuGet.Packaging.dll",
+        "lib/net45/NuGet.Packaging.xml",
+        "lib/netstandard1.3/NuGet.Packaging.dll",
+        "lib/netstandard1.3/NuGet.Packaging.xml"
+      ]
+    },
+    "NuGet.Packaging.Core/3.5.0-beta-final": {
+      "sha512": "sdc8dUnbjEpNzIK5h5frJgn7ARQjQLdXMC5YrMHoEh0sCJnd2p1Lu4JvHK7mqn/MurVCAvoAjNDyazzFaVCD0w==",
+      "type": "package",
+      "files": [
+        "NuGet.Packaging.Core.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Packaging.Core.nuspec",
+        "lib/net45/NuGet.Packaging.Core.dll",
+        "lib/net45/NuGet.Packaging.Core.xml",
+        "lib/netstandard1.3/NuGet.Packaging.Core.dll",
+        "lib/netstandard1.3/NuGet.Packaging.Core.xml"
+      ]
+    },
+    "NuGet.Packaging.Core.Types/3.5.0-beta-final": {
+      "sha512": "35AVdtLFJFp66CI9EDS61iviOe4UsCwfGh7RILK3j2ihZtlbTIIS5ygjmS8GnTkhNpmdwQRIk/rUempv4ABBxQ==",
+      "type": "package",
+      "files": [
+        "NuGet.Packaging.Core.Types.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Packaging.Core.Types.nuspec",
+        "lib/net45/NuGet.Packaging.Core.Types.dll",
+        "lib/net45/NuGet.Packaging.Core.Types.xml",
+        "lib/netstandard1.3/NuGet.Packaging.Core.Types.dll",
+        "lib/netstandard1.3/NuGet.Packaging.Core.Types.xml"
+      ]
+    },
+    "NuGet.ProjectModel/3.5.0-beta-final": {
+      "sha512": "ddWYHyNLP2InZMui7UduGNFATnXdVe4vjE0NdDGNGKF+zXgeRna5hYWvFfmL/UZN7yr6uvN3Kq4A1+/qjoSn3w==",
+      "type": "package",
+      "files": [
+        "NuGet.ProjectModel.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.ProjectModel.nuspec",
+        "lib/net45/NuGet.ProjectModel.dll",
+        "lib/net45/NuGet.ProjectModel.xml",
+        "lib/netstandard1.3/NuGet.ProjectModel.dll",
+        "lib/netstandard1.3/NuGet.ProjectModel.xml"
+      ]
+    },
+    "NuGet.Protocol.Core.Types/3.5.0-beta-final": {
+      "sha512": "1r6K1IVpCu8Lti319FSzRyCmjfwLCoWAwdqdAWOAO3JK7ivyToSi3Gk1N3bHl6jiqiXkKGHZIQv5WR7QPj/fqw==",
+      "type": "package",
+      "files": [
+        "NuGet.Protocol.Core.Types.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Protocol.Core.Types.nuspec",
+        "lib/net45/NuGet.Protocol.Core.Types.dll",
+        "lib/net45/NuGet.Protocol.Core.Types.xml",
+        "lib/netstandard1.3/NuGet.Protocol.Core.Types.dll",
+        "lib/netstandard1.3/NuGet.Protocol.Core.Types.xml"
+      ]
+    },
+    "NuGet.Protocol.Core.v3/3.5.0-beta-final": {
+      "sha512": "avrqOi+8sDERlbXhSURd5DPtEQoGUcThuVH784i0AxIeYPtZBV66Eq9P8dcoDR7S+cXd4Zeppc+FoMfh1Jw8Dg==",
+      "type": "package",
+      "files": [
+        "NuGet.Protocol.Core.v3.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Protocol.Core.v3.nuspec",
+        "lib/net45/NuGet.Protocol.Core.v3.dll",
+        "lib/net45/NuGet.Protocol.Core.v3.xml",
+        "lib/netstandard1.3/NuGet.Protocol.Core.v3.dll",
+        "lib/netstandard1.3/NuGet.Protocol.Core.v3.xml"
+      ]
+    },
+    "NuGet.Repositories/3.5.0-beta-final": {
+      "sha512": "+w022gOL3QFrNnx0dXMBOmV11q2kGLYV/sFY5bdIaK778ELzAKRCdBsFfxs0YNPLKRGtq2Gn4FNOmyviKuNe4g==",
+      "type": "package",
+      "files": [
+        "NuGet.Repositories.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Repositories.nuspec",
+        "lib/net45/NuGet.Repositories.dll",
+        "lib/net45/NuGet.Repositories.xml",
+        "lib/netstandard1.3/NuGet.Repositories.dll",
+        "lib/netstandard1.3/NuGet.Repositories.xml"
+      ]
+    },
+    "NuGet.RuntimeModel/3.5.0-beta-final": {
+      "sha512": "5opNw7zHG5wC0Qx9AzlopdPg48Tf/QVcVVKmPRuwUa3VBA1b9DBjY+1jCkaof8JRzyHZqLnxd6T9BuT98Jk0YQ==",
+      "type": "package",
+      "files": [
+        "NuGet.RuntimeModel.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.RuntimeModel.nuspec",
+        "lib/net45/NuGet.RuntimeModel.dll",
+        "lib/net45/NuGet.RuntimeModel.xml",
+        "lib/netstandard1.3/NuGet.RuntimeModel.dll",
+        "lib/netstandard1.3/NuGet.RuntimeModel.xml"
+      ]
+    },
+    "NuGet.Versioning/3.5.0-beta-final": {
+      "sha512": "fwFF9Mck1hgZVDvvJLU81gcaidMksfRoCwyjBALEXxnp1fJr4xLyGbTRdbf2OKI5OODGuUpxaMkcz7P4T8HsXw==",
+      "type": "package",
+      "files": [
+        "NuGet.Versioning.3.5.0-beta-final.nupkg.sha512",
+        "NuGet.Versioning.nuspec",
+        "lib/net45/NuGet.Versioning.dll",
+        "lib/net45/NuGet.Versioning.xml",
+        "lib/netstandard1.0/NuGet.Versioning.dll",
+        "lib/netstandard1.0/NuGet.Versioning.xml"
       ]
     },
     "Remotion.Linq/2.0.2": {
@@ -9462,6 +10067,7 @@
       "Microsoft.AspNetCore.Mvc >= 1.0.0-rc2-final",
       "Microsoft.AspNetCore.Server.IISIntegration >= 1.0.0-rc2-final",
       "Microsoft.AspNetCore.Server.Kestrel >= 1.0.0-rc2-final",
+      "Microsoft.EntityFrameworkCore.Tools >= 1.0.0-preview1-final",
       "Microsoft.Extensions.Configuration.EnvironmentVariables >= 1.0.0-rc2-final",
       "Microsoft.Extensions.Configuration.FileExtensions >= 1.0.0-rc2-final",
       "Microsoft.Extensions.Configuration.Json >= 1.0.0-rc2-final",
