@@ -4,7 +4,6 @@
 -nowarn:CS1701
 -nowarn:CS1702
 -nowarn:CS1705
--t:library
 -debug:full
 -nostdlib
 -nologo
@@ -141,8 +140,12 @@
 -r:"C:\Users\dpawl\.nuget\packages\System.Xml.XDocument\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.XDocument.dll"
 -r:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\bin\Debug\netcoreapp1.0\CQRS.Contracts.dll"
 -r:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\bin\Debug\netcoreapp1.0\CQRS.Infrastructure.dll"
+"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\EnableMigration.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\IInMemoryEventSotre.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\InMemoryEventStore.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\WriteContext.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\DependencyInjection\Registration.cs"
+"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\20160610192243_init.cs"
+"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\20160610192243_init.Designer.cs"
+"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\WriteContextModelSnapshot.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Properties\AssemblyInfo.cs"

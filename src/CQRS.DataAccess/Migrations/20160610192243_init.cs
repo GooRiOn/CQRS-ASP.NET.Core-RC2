@@ -12,11 +12,14 @@ namespace CQRS.DataAccess.Migrations
                 name: "ItemEvents",
                 columns: table => new
                 {
-                    AggregateId = table.Column<Guid>(nullable: false)
+                    AggregateId = table.Column<Guid>(nullable: false),
+                    Discriminator = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Quantity = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ItemEvents", x => x.AggregateId);
+                    table.PrimaryKey("PrimaryKey_AggregateId", x => x.AggregateId);
                 });
         }
 

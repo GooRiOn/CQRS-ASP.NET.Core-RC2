@@ -72,4 +72,5 @@
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Commands\AddItemCommand.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\ItemAddedEvent.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\ItemBaseEvent.cs"
+"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\ItemUpdatedEvent.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Properties\AssemblyInfo.cs"

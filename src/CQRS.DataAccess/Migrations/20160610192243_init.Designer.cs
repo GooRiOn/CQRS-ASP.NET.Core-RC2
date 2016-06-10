@@ -8,9 +8,10 @@ using CQRS.DataAccess;
 namespace CQRS.DataAccess.Migrations
 {
     [DbContext(typeof(WriteContext))]
-    partial class WriteContextModelSnapshot : ModelSnapshot
+    [Migration("20160610192243_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
