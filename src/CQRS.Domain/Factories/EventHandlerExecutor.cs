@@ -5,16 +5,16 @@ using CQRS.Infrastructure.Interfaces.Handlers;
 
 namespace CQRS.Domain.Factories
 {
-    public class EventHandlerFactory : IEventHandlerFactory
+    public class EventHandlerExecutor : IEventHandlerExecutor
     {
         ICustomDependencyResolver CustomDependencyResolver { get; }
 
-        public EventHandlerFactory(ICustomDependencyResolver customDependencyResolver)
+        public EventHandlerExecutor(ICustomDependencyResolver customDependencyResolver)
         {
             CustomDependencyResolver = customDependencyResolver;
         }
 
-        public IEventHandler<TEvent> Get<TEvent>() where TEvent : class, IEvent =>
-             CustomDependencyResolver.Resolve<IEventHandler<TEvent>>();
+        public void Execute<TEvent>(TEvent @event) where TEvent : class, IEvent =>
+             CustomDependencyResolver.Resolve<IEventHandler<TEvent>>().Handle(@event);
     }
 }

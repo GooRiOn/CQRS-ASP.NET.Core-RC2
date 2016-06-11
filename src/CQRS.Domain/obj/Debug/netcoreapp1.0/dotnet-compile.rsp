@@ -87,5 +87,5 @@ C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CommandHandlers\AddItemCommandHand
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\DependencyInjection\Registration.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\EventHandlers\ItemAddedEventHandler.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Factories\CommandHandlerFactory.cs
-C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Factories\EventHandlerFactory.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Factories\EventHandlerExecutor.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Properties\AssemblyInfo.cs

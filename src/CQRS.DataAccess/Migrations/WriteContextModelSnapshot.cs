@@ -51,7 +51,7 @@ namespace CQRS.DataAccess.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("Quantity");
+                    b.Property<int?>("Quantity");
 
                     b.ToTable("ItemUpdatedEvent");
 

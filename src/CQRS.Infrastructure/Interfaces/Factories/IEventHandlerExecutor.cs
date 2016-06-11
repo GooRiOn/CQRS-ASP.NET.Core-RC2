@@ -3,8 +3,8 @@ using CQRS.Infrastructure.Interfaces.Handlers;
 
 namespace CQRS.Infrastructure.Interfaces.Factories
 {
-    public interface IEventHandlerFactory
+    public interface IEventHandlerExecutor
     {
-        IEventHandler<TEvent> Get<TEvent>() where TEvent : class, IEvent;
+        void Execute<TEvent>(TEvent @event) where TEvent : class, IEvent;
     }
 }

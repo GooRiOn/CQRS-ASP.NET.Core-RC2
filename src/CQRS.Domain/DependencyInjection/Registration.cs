@@ -15,7 +15,7 @@ namespace CQRS.Domain.DependencyInjection
         {
             DataAccess.DependencyInjection.Registration.Register(containerBuilder);
 
-            containerBuilder.RegisterType<EventHandlerFactory>().As<IEventHandlerFactory>();
+            containerBuilder.RegisterType<EventHandlerExecutor>().As<IEventHandlerExecutor>();
 
             containerBuilder.RegisterType<ItemAddedEventHandler>().As<IEventHandler<ItemAddedEvent>>();
 

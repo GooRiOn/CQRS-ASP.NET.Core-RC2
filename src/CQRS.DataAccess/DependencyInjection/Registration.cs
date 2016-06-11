@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using Autofac;
+﻿using Autofac;
+using CQRS.Infrastructure.Interfaces.EventStore;
 
 namespace CQRS.DataAccess.DependencyInjection
 {
@@ -7,8 +7,9 @@ namespace CQRS.DataAccess.DependencyInjection
     {
         public static void Register(ContainerBuilder containerBuilder)
         {
-            containerBuilder.RegisterType<InMemoryEventStore>().As<IInMemoryEventSotre>().SingleInstance();
-            containerBuilder.RegisterType<WriteContext>().AsSelf();           
+            containerBuilder.RegisterType<WriteContext>().AsSelf();
+
+            containerBuilder.RegisterType<EventStore>().As<IEventStore>();
         }
     }
 }

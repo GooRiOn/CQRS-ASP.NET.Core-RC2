@@ -1,19 +1,20 @@
-﻿using CQRS.Contracts.Commands;
+﻿using System.Collections.Generic;
+using CQRS.Contracts.Commands;
 using CQRS.Contracts.Events;
-using CQRS.DataAccess;
 using CQRS.Domain.Aggregates;
 using CQRS.Infrastructure.Interfaces.Busses;
 using CQRS.Infrastructure.Interfaces.Handlers;
 using System.Linq;
+using CQRS.Infrastructure.Interfaces.EventStore;
 
 namespace CQRS.Domain.CommandHandlers
 {
     public class AddItemCommandHandler : ICommandHandler<AddItemCommand>
     {
-        IInMemoryEventSotre EventSotre { get; }
+        IEventStore EventSotre { get; }
         IEventBus EventBus { get; }
  
-        public AddItemCommandHandler(IInMemoryEventSotre eventStore, IEventBus eventBus)
+        public AddItemCommandHandler(IEventStore eventStore, IEventBus eventBus)
         {
             EventSotre = eventStore;
             EventBus = eventBus;
@@ -21,14 +22,20 @@ namespace CQRS.Domain.CommandHandlers
 
         public void Handle(AddItemCommand command)
         {
-            var item = new Item(command.Id, command.Name, command.Quantity);
-            item.Version = -1;
+            var item = new Item(command.Id, command.Name, command.Quantity)
+            {
+                Version = -1
+            };
 
-            EventSotre.Persist(item.GetUncommittedEvents());
+            var events = item.GetUncommittedEvents();
 
-            var uncommittedEvent = item.GetUncommittedEvents().FirstOrDefault() as ItemAddedEvent;
+            EventSotre.Persist(events);
 
-            EventBus.Send(uncommittedEvent);
+            foreach (var @event in events)
+            {
+                var itemEvent = @event;
+                EventBus.Send(itemEvent);
+            }
         }
     }
 }

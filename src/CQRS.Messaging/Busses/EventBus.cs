@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 using CQRS.Contracts.Events;
@@ -14,46 +15,29 @@ namespace CQRS.Messaging.Busses
     {
         //TODO: Integration with RabbitMQ, Redis?
 
-        IEventHandlerFactory EventHandlerFactory { get; }
+        IEventHandlerExecutor EventHandlerExecutor { get; }
         ICustomDependencyResolver test;
 
-        public EventBus(IEventHandlerFactory eventHandlerFactory, ICustomDependencyResolver test1)
+        public EventBus(IEventHandlerExecutor eventHandlerExecutor, ICustomDependencyResolver test1)
         {
-            EventHandlerFactory = eventHandlerFactory;
+            EventHandlerExecutor = eventHandlerExecutor;
             test = test1;
         }
 
         public void Send<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
-            var eventHandler = GetEventHandler(@event);
-            eventHandler.Handle(@event);
-        }
+            var eventType = @event.GetType();
+            var eventHandlerFactoryType = EventHandlerExecutor.GetType();
 
-        public void Send<TEvent>(IEnumerable<TEvent> events) where TEvent : class, IEvent
-        {
-            foreach(var @event in events)
-            {
-                var eventHandler = GetEventHandler(@event);
-                eventHandler.Handle(@event);
-            }
+            eventHandlerFactoryType
+            .GetMethod(nameof(IEventHandlerExecutor.Execute))
+            .MakeGenericMethod(eventType)
+            .Invoke(EventHandlerExecutor, new object[] { @event});
         }
-
+       
         public Task SendAsync<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
             throw new System.NotImplementedException();
-        }
-
-        private IEventHandler<TEvent> GetEventHandler<TEvent>(TEvent @event) where TEvent : class, IEvent
-        {
-            var eventType = @event.GetType();
-            var eventHandlerFactoryType = EventHandlerFactory.GetType();
-
-            var eventHandler = (IEventHandler<TEvent>)eventHandlerFactoryType
-                .GetMethod(nameof(IEventHandlerFactory.Get))
-                .MakeGenericMethod(eventType)
-                .Invoke(EventHandlerFactory, new object[] { });
-
-            return eventHandler;
         }
     }
 }
