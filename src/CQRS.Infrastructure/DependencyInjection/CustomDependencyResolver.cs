@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using CQRS.Infrastructure.DependencyInjection.Interfaces.DependencyInjection;
+using CQRS.Infrastructure.Interfaces.DependencyInjection;
 
 namespace CQRS.Infrastructure.DependencyInjection
 {

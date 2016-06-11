@@ -8,7 +8,7 @@ namespace CQRS.ReadSide.DependencyInjection
     {
         public static void Register(ContainerBuilder conatinerBuilder)
         {
-            conatinerBuilder.RegisterGeneric(typeof(InMemoryGenericRepo<>)).As(typeof(IInMemoryGenericRepo<>));
+            conatinerBuilder.RegisterGeneric(typeof(InMemoryGenericRepo<>)).As(typeof(IInMemoryGenericRepo<>)).SingleInstance();
         }
     }
 }

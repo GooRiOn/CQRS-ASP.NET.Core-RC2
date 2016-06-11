@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CQRS.Contracts.Events;
 using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Domain.Aggregates
@@ -12,7 +13,7 @@ namespace CQRS.Domain.Aggregates
 
         protected List<IEvent> Events { get; set; } = new List<IEvent>();
 
-        public IEnumerable<IEvent> GetUncommittedEvents() => Events;
+        public List<IEvent> GetUncommittedEvents() => Events;
 
         public void MarkEventsAsCommitted() => Events.Clear();
 

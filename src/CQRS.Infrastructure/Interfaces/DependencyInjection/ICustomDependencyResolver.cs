@@ -1,4 +1,4 @@
-﻿namespace CQRS.Infrastructure.DependencyInjection.Interfaces.DependencyInjection
+﻿namespace CQRS.Infrastructure.Interfaces.DependencyInjection
 {
     public interface ICustomDependencyResolver
     {
