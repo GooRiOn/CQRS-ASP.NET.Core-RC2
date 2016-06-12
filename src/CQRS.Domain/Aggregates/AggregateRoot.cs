@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using CQRS.Contracts.Events;
 using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Domain.Aggregates

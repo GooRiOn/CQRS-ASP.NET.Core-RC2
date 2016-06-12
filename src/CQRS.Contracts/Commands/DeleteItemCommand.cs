@@ -5,6 +5,6 @@ namespace CQRS.Contracts.Commands
 {
     public class DeleteItemCommand : ICommand
     {
-        public Guid Id { get; }
+        public Guid Id { get; set; }
     }
 }

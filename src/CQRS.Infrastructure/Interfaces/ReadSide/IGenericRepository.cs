@@ -1,8 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace CQRS.Infrastructure.Interfaces.ReadSide
 {
-    public interface IGenericRepository<in TEntity> where TEntity : class, IInternalEntity
+    public interface IGenericRepository<TEntity> where TEntity : class, IInternalEntity
     {
         void Add(TEntity entity);
 
@@ -13,5 +14,7 @@ namespace CQRS.Infrastructure.Interfaces.ReadSide
         void Commit();
 
         Task CommitAsync();
+
+        TEntity GetById(Guid id);
     }
 }

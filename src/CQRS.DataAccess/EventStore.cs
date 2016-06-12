@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using CQRS.Infrastructure.Interfaces.Contracts;
 using CQRS.Infrastructure.Interfaces.EventStore;
@@ -29,6 +30,11 @@ namespace CQRS.DataAccess
             }
 
             Context.SaveChanges();
+        }
+
+        public IEnumerable<IEvent> GetAggregateEvents<TEvent>(Guid id) where TEvent : class, IEvent
+        {
+            return Context.Set<TEvent>().Where(e => e.AggregateId == id).ToList();
         }
     }
 }

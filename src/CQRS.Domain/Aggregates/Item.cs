@@ -11,8 +11,17 @@ namespace CQRS.Domain.Aggregates
 
         public int Quantity { get; set; }
 
+        public Item()
+        {
+            
+        }
+
         public Item(Guid id, string name, int quantity)
         {
+            Id = id;
+            Name = name;
+            Quantity = quantity;
+
             Events.Add(new ItemAddedEvent
             {
                 AggregateId = id,
@@ -21,9 +30,40 @@ namespace CQRS.Domain.Aggregates
             });            
         }
 
+        public void Delete()
+        {
+            Events.Add(new ItemDeletedEvent {AggregateId = Id});
+        }
+
         public override void LoadFromHistory(IEnumerable<IEvent> events)
         {
-            throw new NotImplementedException();
+            foreach (var @event in events)
+            {
+                ItemAddedEvent itemAddedEvent;
+                ItemUpdatedEvent itemUpdatedEvent;
+                ItemDeletedEvent itemDeletedEvent;
+
+                if ((itemAddedEvent = @event as ItemAddedEvent) != null)
+                {
+                    Id = itemAddedEvent.AggregateId;
+                    Name = itemAddedEvent.Name;
+                    Quantity = itemAddedEvent.Quantity;
+                }
+                else if ((itemUpdatedEvent = @event as ItemUpdatedEvent) != null)
+                {
+                    Id = itemUpdatedEvent.AggregateId;
+
+                    if (!string.IsNullOrEmpty(itemUpdatedEvent.Name))
+                        Name = itemUpdatedEvent.Name;
+
+                    if (itemUpdatedEvent.Quantity.HasValue)
+                        Quantity = itemUpdatedEvent.Quantity.Value;
+                }
+                else if ((itemDeletedEvent = @event as ItemDeletedEvent) != null)
+                {
+                    throw new InvalidOperationException("Aggregate deleted");
+                }
+            }
         }
     }
 }

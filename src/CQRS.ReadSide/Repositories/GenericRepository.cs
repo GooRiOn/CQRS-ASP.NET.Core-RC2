@@ -17,17 +17,17 @@ namespace CQRS.ReadSide.Repositories
             Context = context;
         }
 
-        void IGenericRepository<TEntity>.Add(TEntity entity)
+        public void Add(TEntity entity)
         {
             Context.Set<TEntity>().Add(entity);
         }
 
-        void IGenericRepository<TEntity>.Update(TEntity entity)
+        public void Update(TEntity entity)
         {
             Context.Entry(entity).State = EntityState.Modified;
         }
 
-        void IGenericRepository<TEntity>.SoftDelete(TEntity entity)
+        public void SoftDelete(TEntity entity)
         {
             var softDeletableEntity = entity as ISoftDeletable;
 
@@ -37,14 +37,19 @@ namespace CQRS.ReadSide.Repositories
             softDeletableEntity.SoftDelete();
         }
 
-        void IGenericRepository<TEntity>.Commit()
+        public void Commit()
         {
             Context.SaveChanges();
         }
 
-        async Task IGenericRepository<TEntity>.CommitAsync()
+        public async Task CommitAsync()
         {
             await Context.SaveChangesAsync();
+        }
+
+        public TEntity GetById(Guid id)
+        {
+            return Context.Set<TEntity>().FirstOrDefault(e => e.Id == id);
         }
     }
 }

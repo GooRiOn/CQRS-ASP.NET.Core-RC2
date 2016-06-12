@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using CQRS.Contracts.Commands;
 using CQRS.Infrastructure.Interfaces.Busses;
@@ -28,12 +29,10 @@ namespace CQRS.Controllers
             return ItemRepository.GetAll();
         }
 
-        [HttpGet("delete")]
-        public IEnumerable<ItemEntity> DeleteItemTest()
+        [HttpGet("{id}/delete")]
+        public void DeleteItemTest(Guid id)
         {
-            CommandBus.Send(new AddItemCommand { Name = "Item1", Quantity = 30 });
-
-            return ItemRepository.GetAll();
+            CommandBus.Send(new DeleteItemCommand() {Id = id});
         }
 
 

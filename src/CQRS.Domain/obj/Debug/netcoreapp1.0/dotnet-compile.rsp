@@ -85,8 +85,10 @@
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Aggregates\AggregateRoot.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Aggregates\Item.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CommandHandlers\AddItemCommandHandler.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CommandHandlers\DeleteItemCommandHandler.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\DependencyInjection\Registration.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\EventHandlers\ItemAddedEventHandler.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\EventHandlers\ItemDeletedEventHandler.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Factories\CommandHandlerFactory.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Factories\EventHandlerExecutor.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Properties\AssemblyInfo.cs
