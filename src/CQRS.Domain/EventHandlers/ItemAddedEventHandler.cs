@@ -1,24 +1,32 @@
 ﻿using CQRS.Contracts.Events;
 using CQRS.Infrastructure.Interfaces.Handlers;
 using CQRS.Infrastructure.Interfaces.ReadSide;
-using CQRS.Domain.Aggregates;
+using CQRS.ReadSide.Entities;
+using CQRS.ReadSide.Repositories.Interfaces;
 
 namespace CQRS.Domain.EventHandlers
 {
     public class ItemAddedEventHandler : IEventHandler<ItemAddedEvent>
     {
-        IInMemoryGenericRepo<Item> InMemoryRepo { get; }
+        IItemRepository ItemRepository { get; }
 
-        public ItemAddedEventHandler(IInMemoryGenericRepo<Item> inMemoryRepo)
+        public ItemAddedEventHandler(IItemRepository itemRepository)
         {
-            InMemoryRepo = inMemoryRepo;
+            ItemRepository = itemRepository;
         }
 
         public void Handle(ItemAddedEvent @event)
         {
-            //just for quick test, CANNOT INSERT AGGREGATES !!!
+            var itemRepository = ((IGenericRepository<ItemEntity>)ItemRepository);
 
-            InMemoryRepo.Insert(new Item(@event.AggregateId,@event.Name, @event.Quantity));
+            itemRepository.Add(new ItemEntity
+            {
+                Id = @event.AggregateId,
+                Name = @event.Name,
+                Quantity = @event.Quantity
+            });
+
+            itemRepository.Commit();
         }
     }
 }

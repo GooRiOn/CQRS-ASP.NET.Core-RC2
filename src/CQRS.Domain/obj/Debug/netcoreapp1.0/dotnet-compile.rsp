@@ -81,6 +81,7 @@
 --reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\bin\Debug\netcoreapp1.0\CQRS.Contracts.dll
 --reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\bin\Debug\netcoreapp1.0\CQRS.DataAccess.dll
 --reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\bin\Debug\netcoreapp1.0\CQRS.Infrastructure.dll
+--reference:C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.ReadSide\bin\Debug\netcoreapp1.0\CQRS.ReadSide.dll
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Aggregates\AggregateRoot.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\Aggregates\Item.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Domain\CommandHandlers\AddItemCommandHandler.cs

@@ -81,6 +81,7 @@ C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Factories\IComm
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Factories\IEventHandlerExecutor.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Handlers\ICommandHandler.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Handlers\IEventHandler.cs
-C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\ReadSide\IInMemoryGenericRepo.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\ReadSide\IGenericRepository.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\ReadSide\IInternalEntity.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\ReadSide\ISoftDeletable.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Properties\AssemblyInfo.cs

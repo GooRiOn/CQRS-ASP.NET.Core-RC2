@@ -17,7 +17,8 @@ namespace CQRS.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ItemBaseEvent>().HasKey(e => e.AggregateId).HasName("PrimaryKey_AggregateId"); ;
+            modelBuilder.Entity<ItemBaseEvent>().HasKey(e => e.AggregateId).HasName("PrimaryKey_AggregateId");
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

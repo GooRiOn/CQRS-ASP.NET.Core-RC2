@@ -3905,6 +3905,7 @@
           "CQRS.Contracts": "1.0.0",
           "CQRS.DataAccess": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
+          "CQRS.ReadSide": "1.0.0",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "compile": {
@@ -3952,6 +3953,8 @@
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
           "CQRS.Infrastructure": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
           "NETStandard.Library": "1.5.0-rc2-24027"
         },
         "compile": {
