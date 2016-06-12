@@ -3609,6 +3609,7 @@
       "CQRS.Domain/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.5.0-rc2-24027",
+          "CQRS.ReadSide": "1.0.0",
           "CQRS.Infrastructure": "1.0.0",
           "CQRS.DataAccess": "1.0.0",
           "CQRS.Contracts": "1.0.0",
@@ -3653,7 +3654,9 @@
         "dependencies": {
           "NETStandard.Library": "1.5.0-rc2-24027",
           "CQRS.Infrastructure": "1.0.0",
-          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240"
+          "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
+          "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final"
         },
         "runtime": {
           "CQRS.ReadSide.dll": {}

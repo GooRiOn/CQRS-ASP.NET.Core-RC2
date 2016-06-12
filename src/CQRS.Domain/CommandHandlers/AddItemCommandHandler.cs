@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
-using CQRS.Contracts.Commands;
-using CQRS.Contracts.Events;
+﻿using CQRS.Contracts.Commands;
 using CQRS.Domain.Aggregates;
 using CQRS.Infrastructure.Interfaces.Busses;
 using CQRS.Infrastructure.Interfaces.Handlers;
-using System.Linq;
 using CQRS.Infrastructure.Interfaces.EventStore;
 
 namespace CQRS.Domain.CommandHandlers
@@ -32,10 +29,7 @@ namespace CQRS.Domain.CommandHandlers
             EventSotre.Persist(events);
 
             foreach (var @event in events)
-            {
-                var itemEvent = @event;
-                EventBus.Send(itemEvent);
-            }
+                EventBus.Send(@event);
         }
     }
 }

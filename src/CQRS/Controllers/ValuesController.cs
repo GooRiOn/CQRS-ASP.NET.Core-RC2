@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using CQRS.Contracts.Commands;
 using CQRS.Infrastructure.Interfaces.Busses;
-using CQRS.Infrastructure.Interfaces.ReadSide;
-using CQRS.Domain.Aggregates;
+using CQRS.ReadSide.Entities;
+using CQRS.ReadSide.Repositories.Interfaces;
 
 namespace CQRS.Controllers
 {
@@ -11,22 +11,31 @@ namespace CQRS.Controllers
     public class ValuesController : Controller
     {
         ICommandBus CommandBus { get; }
-        IInMemoryGenericRepo<Item> Repo { get; }
+        IItemRepository ItemRepository { get; }
 
-        public ValuesController(ICommandBus commandBus, IInMemoryGenericRepo<Item> repo)
+        public ValuesController(ICommandBus commandBus, IItemRepository itemRepository)
         {
             CommandBus = commandBus;
-            Repo = repo;
+            ItemRepository = itemRepository;
         }
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Item> Get()
+        public IEnumerable<ItemEntity> AddItemTest()
         {
             CommandBus.Send(new AddItemCommand {Name = "Item1", Quantity = 30 });
 
-            return Repo.GetAll();
+            return ItemRepository.GetAll();
         }
+
+        [HttpGet("delete")]
+        public IEnumerable<ItemEntity> DeleteItemTest()
+        {
+            CommandBus.Send(new AddItemCommand { Name = "Item1", Quantity = 30 });
+
+            return ItemRepository.GetAll();
+        }
+
 
         // GET api/values/5
         [HttpGet("{id}")]
