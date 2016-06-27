@@ -73,6 +73,7 @@
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\DependencyInjection\CustomDependencyResolver.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Busses\ICommandBus.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Busses\IEventBus.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Contracts\IChangeAppliable.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Contracts\ICommand.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\Contracts\IEvent.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\Interfaces\DependencyInjection\ICustomDependencyResolver.cs

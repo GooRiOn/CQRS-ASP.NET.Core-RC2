@@ -5,7 +5,7 @@ using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Domain.Aggregates
 {
-    public class Item : AggregateRoot
+    public class Item : AggregateRoot, IChangeAppliable<ItemAddedEvent>, IChangeAppliable<ItemUpdatedEvent>
     {
         public string Name { get; set; }
 
@@ -35,35 +35,51 @@ namespace CQRS.Domain.Aggregates
             Events.Add(new ItemDeletedEvent {AggregateId = Id});
         }
 
-        public override void LoadFromHistory(IEnumerable<IEvent> events)
+        //public override void LoadFromHistory(IEnumerable<IEvent> events)
+        //{
+        //    foreach (var @event in events)
+        //    {
+        //        ItemAddedEvent itemAddedEvent;
+        //        ItemUpdatedEvent itemUpdatedEvent;
+        //        ItemDeletedEvent itemDeletedEvent;
+
+        //        if ((itemAddedEvent = @event as ItemAddedEvent) != null)
+        //        {
+        //            Id = itemAddedEvent.AggregateId;
+        //            Name = itemAddedEvent.Name;
+        //            Quantity = itemAddedEvent.Quantity;
+        //        }
+        //        else if ((itemUpdatedEvent = @event as ItemUpdatedEvent) != null)
+        //        {
+        //            Id = itemUpdatedEvent.AggregateId;
+
+        //            if (!string.IsNullOrEmpty(itemUpdatedEvent.Name))
+        //                Name = itemUpdatedEvent.Name;
+
+        //            if (itemUpdatedEvent.Quantity.HasValue)
+        //                Quantity = itemUpdatedEvent.Quantity.Value;
+        //        }
+        //        else if ((itemDeletedEvent = @event as ItemDeletedEvent) != null)
+        //        {
+        //            throw new InvalidOperationException("Aggregate deleted");
+        //        }
+        //    }
+        //}
+
+        public void ApplyChange(ItemAddedEvent @event)
         {
-            foreach (var @event in events)
-            {
-                ItemAddedEvent itemAddedEvent;
-                ItemUpdatedEvent itemUpdatedEvent;
-                ItemDeletedEvent itemDeletedEvent;
+            Id = @event.AggregateId;
+            Name = @event.Name;
+            Quantity = @event.Quantity;
+        }
 
-                if ((itemAddedEvent = @event as ItemAddedEvent) != null)
-                {
-                    Id = itemAddedEvent.AggregateId;
-                    Name = itemAddedEvent.Name;
-                    Quantity = itemAddedEvent.Quantity;
-                }
-                else if ((itemUpdatedEvent = @event as ItemUpdatedEvent) != null)
-                {
-                    Id = itemUpdatedEvent.AggregateId;
+        public void ApplyChange(ItemUpdatedEvent @event)
+        {
+            if (!string.IsNullOrEmpty(@event.Name))
+                Name = @event.Name;
 
-                    if (!string.IsNullOrEmpty(itemUpdatedEvent.Name))
-                        Name = itemUpdatedEvent.Name;
-
-                    if (itemUpdatedEvent.Quantity.HasValue)
-                        Quantity = itemUpdatedEvent.Quantity.Value;
-                }
-                else if ((itemDeletedEvent = @event as ItemDeletedEvent) != null)
-                {
-                    throw new InvalidOperationException("Aggregate deleted");
-                }
-            }
+            if (@event.Quantity.HasValue)
+                Quantity = @event.Quantity.Value;
         }
     }
 }

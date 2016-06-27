@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using CQRS.Infrastructure.Interfaces.Contracts;
 
 namespace CQRS.Domain.Aggregates
@@ -16,7 +17,18 @@ namespace CQRS.Domain.Aggregates
 
         public void MarkEventsAsCommitted() => Events.Clear();
 
-        public abstract void LoadFromHistory(IEnumerable<IEvent> events);
+        public virtual void LoadFromHistory(IEnumerable<IEvent> events)
+        {
+            foreach (var @event in events)
+            {
+                var aggregateType = GetType();
+
+                var eventType = @event.GetType();
+
+                aggregateType.GetMethod(nameof(IChangeAppliable<IEvent>.ApplyChange), new[] {eventType})
+                    .Invoke(this, new object[] {@event});
+            }
+        }
 
     }
 }
