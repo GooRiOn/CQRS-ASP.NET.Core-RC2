@@ -29,6 +29,8 @@ namespace CQRS.Domain.CommandHandlers
 
             var uncommitedEvents = item.GetUncommittedEvents();
 
+            EventStore.Persist(uncommitedEvents);
+
             foreach (var @event in uncommitedEvents)
                 EventBus.Send(@event);
         }

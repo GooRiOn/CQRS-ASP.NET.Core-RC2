@@ -71,6 +71,7 @@
 -r:"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Infrastructure\bin\Debug\netcoreapp1.0\CQRS.Infrastructure.dll"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Commands\AddItemCommand.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Commands\DeleteItemCommand.cs"
+"C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Commands\UpdateItemCommand.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\ItemAddedEvent.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\ItemBaseEvent.cs"
 "C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.Contracts\Events\ItemDeletedEvent.cs"

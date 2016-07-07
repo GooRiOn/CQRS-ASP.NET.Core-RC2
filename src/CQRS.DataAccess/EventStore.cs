@@ -4,6 +4,7 @@ using System.Reflection;
 using CQRS.Infrastructure.Interfaces.Contracts;
 using CQRS.Infrastructure.Interfaces.EventStore;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace CQRS.DataAccess
 {
@@ -22,7 +23,7 @@ namespace CQRS.DataAccess
             {
                 var eventType = @event.GetType();
 
-                var genericSetMethod = typeof(WriteContext).GetMethods().First(m => m.Name == "Set" && m.IsGenericMethod);
+                var genericSetMethod = Context.GetType().GetMethods().First(m => m.Name == "Set" && m.IsGenericMethod);
 
                 var dbSet = genericSetMethod.MakeGenericMethod(eventType).Invoke(Context, null);
 
@@ -34,7 +35,7 @@ namespace CQRS.DataAccess
 
         public IEnumerable<IEvent> GetAggregateEvents<TEvent>(Guid id) where TEvent : class, IEvent
         {
-            return Context.Set<TEvent>().Where(e => e.AggregateId == id).ToList();
+            return Context.Set<TEvent>().Where(e => e.AggregateId == id).AsNoTracking().ToList();
         }
     }
 }

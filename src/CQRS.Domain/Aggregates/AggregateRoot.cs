@@ -20,15 +20,17 @@ namespace CQRS.Domain.Aggregates
         public virtual void LoadFromHistory(IEnumerable<IEvent> events)
         {
             foreach (var @event in events)
-            {
-                var aggregateType = GetType();
-
-                var eventType = @event.GetType();
-
-                aggregateType.GetMethod(nameof(IChangeAppliable<IEvent>.ApplyChange), new[] {eventType})
-                    .Invoke(this, new object[] {@event});
-            }
+                ApplyChange(@event);
         }
 
+        protected void ApplyChange(IEvent @event)
+        {
+            var aggregateType = GetType();
+
+            var eventType = @event.GetType();
+
+            aggregateType.GetMethod(nameof(IHandle<IEvent>.Handle), new[] { eventType })
+                    .Invoke(this, new object[] { @event });
+        }
     }
 }

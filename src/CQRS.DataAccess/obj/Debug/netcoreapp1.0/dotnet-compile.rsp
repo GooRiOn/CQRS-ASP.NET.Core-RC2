@@ -150,5 +150,7 @@ C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\WriteContext.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\DependencyInjection\Registration.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\20160610192243_init.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\20160610192243_init.Designer.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\20160707182544_add_primary_key_to_base_event.cs
+C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\20160707182544_add_primary_key_to_base_event.Designer.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Migrations\WriteContextModelSnapshot.cs
 C:\REPO\CQRS-ASP.NET.Core-RC2\src\CQRS.DataAccess\Properties\AssemblyInfo.cs

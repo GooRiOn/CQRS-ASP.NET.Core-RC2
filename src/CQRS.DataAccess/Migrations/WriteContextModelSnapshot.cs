@@ -18,14 +18,16 @@ namespace CQRS.DataAccess.Migrations
 
             modelBuilder.Entity("CQRS.Contracts.Events.ItemBaseEvent", b =>
                 {
-                    b.Property<Guid>("AggregateId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<Guid>("AggregateId");
 
                     b.Property<string>("Discriminator")
                         .IsRequired();
 
-                    b.HasKey("AggregateId")
-                        .HasName("PrimaryKey_AggregateId");
+                    b.HasKey("Id")
+                        .HasName("PrimaryKey_Id");
 
                     b.ToTable("ItemEvents");
 
@@ -43,6 +45,16 @@ namespace CQRS.DataAccess.Migrations
                     b.ToTable("ItemAddedEvent");
 
                     b.HasDiscriminator().HasValue("ItemAddedEvent");
+                });
+
+            modelBuilder.Entity("CQRS.Contracts.Events.ItemDeletedEvent", b =>
+                {
+                    b.HasBaseType("CQRS.Contracts.Events.ItemBaseEvent");
+
+
+                    b.ToTable("ItemDeletedEvent");
+
+                    b.HasDiscriminator().HasValue("ItemDeletedEvent");
                 });
 
             modelBuilder.Entity("CQRS.Contracts.Events.ItemUpdatedEvent", b =>

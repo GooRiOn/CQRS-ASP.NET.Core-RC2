@@ -16,17 +16,15 @@ namespace CQRS.Domain.DependencyInjection
             DataAccess.DependencyInjection.Registration.Register(containerBuilder);
 
             containerBuilder.RegisterType<EventHandlerExecutor>().As<IEventHandlerExecutor>();
-
             containerBuilder.RegisterType<ItemAddedEventHandler>().As<IEventHandler<ItemAddedEvent>>();
-
+            containerBuilder.RegisterType<ItemUpdatedEventHandler>().As<IEventHandler<ItemUpdatedEvent>>();
             containerBuilder.RegisterType<ItemDeletedEventHandler>().As<IEventHandler<ItemDeletedEvent>>();
 
 
 
-            containerBuilder.RegisterType<CommandHandlerFactory>().As<ICommandHandlerFactory>();           
-
+            containerBuilder.RegisterType<CommandHandlerFactory>().As<ICommandHandlerFactory>(); 
             containerBuilder.RegisterType<AddItemCommandHandler>().As<ICommandHandler<AddItemCommand>>();
-
+            containerBuilder.RegisterType<UpdateItemCommandHandler>().As<ICommandHandler<UpdateItemCommand>>();
             containerBuilder.RegisterType<DeleteItemCommandHandler>().As<ICommandHandler<DeleteItemCommand>>();
         }
     }
